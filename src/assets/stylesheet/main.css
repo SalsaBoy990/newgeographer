@@ -852,8 +852,8 @@ a:hover {
 }
 
 .article-height {
-    height: 380px;
-    max-height: 380px
+    height: 366px;
+    max-height: 366px
 }
 
 @media (max-width: 768px) {
@@ -863,6 +863,9 @@ a:hover {
     .title {
         font-size: 1.4rem;
     }
+    #article {
+        margin-top: 0px
+    }
 }
 
 @media (min-width: 768px) {
@@ -871,13 +874,13 @@ a:hover {
     }
 }
 
-/*
+
 @media (min-width: 992px) {
     .article-height {
-        height: 365px
+        height: 340px
     }
 }
-*/
+
 
 
 .btn:hover, .btn:active, .btn:focus {

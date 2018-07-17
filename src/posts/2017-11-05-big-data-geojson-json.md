@@ -1,10 +1,9 @@
 ---
-title: "Big data, GeoJSON és JSON?"
-date: "2018-06-25"
-excerpt: "A Big Data a világszerte előállított óriási adatmennyiséget jelenti, amiből információt akarunk nyerni. A GIS-tudományban a térbeli adatok feldolgozása a célunk. Ebben segít a felhő alapú számítástechnika."
-cover: "./assets/images/writing.jpg"
-comments: false
-topic: null
+title: Big data, GeoJSON és JSON?
+date: '2017-11-05'
+excerpt: >-
+  A Big Data a világszerte előállított óriási adatmennyiséget jelenti, amiből információt akarunk nyerni. A GIS-tudományban a térbeli adatok feldolgozása a célunk. Ebben segít a felhő alapú számítástechnika.
+topic: Big data, GeoJSON, Google Earth Engine
 ---
 
 

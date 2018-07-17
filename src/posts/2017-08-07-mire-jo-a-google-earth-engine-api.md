@@ -1,10 +1,9 @@
 ---
-title: "Mire jó Google Earth Engine API?"
-date: "2018-06-22"
-excerpt: "Ma már nem a térbeli adatok hiánya jelenti a GIS kutatások korlátját, hanem az irdatlan mennyiségben rendelkezésünkre álló távérzékelt adatnak a nagyon hosszadalmas, manuális feldolgozása."
-cover: "./assets/images/node.jpg"
-comments: false
-topic: null
+title: Mire jó Google Earth Engine API?
+date: '2017-08-07'
+excerpt: >-
+  Ma már nem a térbeli adatok hiánya jelenti a GIS kutatások korlátját, hanem az irdatlan mennyiségben rendelkezésünkre álló távérzékelt adatnak a nagyon hosszadalmas, manuális feldolgozása.
+topic: Google Earth Engine
 ---
 
 Ma már nem az adatok hiánya jelenti a földrajzi kutatások korlátját, hanem annak a tömérdek rendelkezésre álló és ingyenes távérzékelt adatnak a rendkívül hosszadalmas feldolgozása. Hiszen csak nagy mennyiségű, empirikus adatból lehet szilárd, megbízható tudományos következtetéseket levonni, és megbízható modelleket megalapozni. A Google Earth Engine felhő alapú számítási platform alkalmazásával szeretném demonstrálni az objektum-orientált programozás szükségét a GIS-tudományban.
