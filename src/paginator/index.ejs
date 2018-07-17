@@ -4,11 +4,7 @@
       <% for (var i = startIndex; i < maxIndex; i++) { %>
       <div class="col-xs-12 col-sm-6 clearfix">
         <article>
-          <% if (i < maxIndex - 2) { %>
           <div class="article-height phalf m0 mb3 border-full border-shadow clearfix bg-white">
-          <% } else { %>
-          <div class="article-height phalf m0 mb0 border-full border-shadow clearfix bg-white">  
-          <% } %>
             <a href="<%= postsDataForIndexPage[i].pathToPost %>" class="title big mbhalf uppercase m0"><%= postsDataForIndexPage[i].title %></a>
             <p class="minimal gray mb0 montserrat"><span class="glyphicon glyphicon-time"></span> <%= postsDataForIndexPage[i].dateFormatted %></p>
             <hr>
@@ -25,7 +21,7 @@
 
     <div class="row">
       <div class="align-center">
-        <ul class="pagination small montserrat">
+        <ul class="pagination small montserrat mt0 pt0">
           <% if (indexPage) { %>
           <li><a class="disabled" href="#">&laquo;</a></li>
           <% } else if (pageNumber === 2) { %>

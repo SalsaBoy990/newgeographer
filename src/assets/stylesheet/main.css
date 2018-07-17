@@ -3,7 +3,7 @@
 
 @media (max-width: 400px) {
     body, html {
-        font-size: 16px !important
+        font-size: 14px !important
     }
 
     img.profile {
@@ -21,7 +21,7 @@
     }
 
     body, html {
-        font-size: 18px !important
+        font-size: 16px !important
     }
 
     img.profile {
@@ -474,7 +474,7 @@ blockquote {
     color: #6D7274;
     font-size: 1.1rem;
     margin: 2rem 1rem;
-   /* margin: 1rem 1rem 1rem 1rem*/
+    border-left: none;
 }
 
 
@@ -780,7 +780,7 @@ a {
     transition: color 0.3s ease-in
 }
 a:hover {
-    color: rgb(0, 12, 15)
+    color: #493f3f
 }
 
 .grayscale {
@@ -822,13 +822,12 @@ a:hover {
 }
 
 .post-date {
-    font-size: 0.8rem;
-    font-family: 'Merriweather Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 2rem;
     color: #6D7274
 }
 
 .post-title {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     color: #C83904;
     font-weight: 800;
     text-transform: uppercase;
