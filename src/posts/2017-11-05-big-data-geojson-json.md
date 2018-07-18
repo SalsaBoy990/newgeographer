@@ -35,7 +35,7 @@ Az adatfúzió (data fusion) során a különböző forrásból származó adato
 
 A „Big Data” tárolására és megosztásához egységes adatszabványokra van szükség, hiszen az adatok változatos forrásokból származnak, más formátumban állnak rendelkezésre. Ahhoz, hogy ezeket össze tudjuk kapcsolni, egy egységes, integrált rendszert kell felépíteni: egy internet felhőre van szükség. Egy ilyet épített fel a földi léptékű földrajzi és távérzékelt adatok feldolgozására a Google. A nagyvállalat hatalmas szerverparkokat üzemeltet erre a célra, amik óriási számítási teljesítményre képesek.
 
-![2. kép: Csendélet a Google egyik szerverparkjában. Persze a gépek keményen pörögnek. Komoly hűtőrendszer védi őket a besüléstől.]()
+![2. kép: Csendélet a Google egyik szerverparkjában. Persze a gépek keményen pörögnek. Komoly hűtőrendszer védi őket a besüléstől.](/assets/images/google_servers.jpg)
 
 ## GeoJSON és JSON
 
