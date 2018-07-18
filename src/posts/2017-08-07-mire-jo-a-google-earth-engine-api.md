@@ -10,9 +10,11 @@ topic: Google Earth Engine
 
 Ma már nem az adatok hiánya jelenti a földrajzi kutatások korlátját, hanem annak a tömérdek rendelkezésre álló és ingyenes távérzékelt adatnak a rendkívül hosszadalmas feldolgozása. Hiszen csak nagy mennyiségű, empirikus adatból lehet szilárd, megbízható tudományos következtetéseket levonni, és megbízható modelleket megalapozni. A Google Earth Engine felhő alapú számítási platform alkalmazásával szeretném demonstrálni az objektum-orientált programozás szükségét a GIS-tudományban.
 
+![borito](/assets/images/cover.jpg)
+
 ## A Google Earth Engine bemutatása
 
-<iframe class="embed-responsive embed-responsive-16by9" width="560" height="315" src="https://www.youtube.com/embed/4E6yQLoGO2o" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+@[youtube](4E6yQLoGO2o)
 
 A felhő alapú szolgáltatások (cloud computing) közös jellemzője, hogy a szolgáltatásokat nem egy dedikált hardvereszközön üzemeltetik, hanem a szolgáltató eszközein elosztva, a szolgáltatás üzemeltetési részleteit a felhasználótól elrejtve. Ezeket a szolgáltatásokat a felhasználók a hálózaton keresztül érhetik el.
 
@@ -40,13 +42,15 @@ A GEE nem kereskedelmi célra ingyenesen elérhető, viszont a használata az **
 
 * Egy űrlapot kell kitölteni [itt](https://signup.earthengine.google.com/). Kb. 1 hét alatt bírálják el, és adnak hozzáférést a platformhoz.
 
-Csak ez a két lépés után tudod használni a Google Earth Engine-t. A továbbiakban dióhéjban bemutatom a GEE működését.
+Csak ez a két lépés után tudod használni a Google Earth Engine-t.
+ A továbbiakban dióhéjban bemutatom a GEE működését.
 
 ## Hogyan működik a Google Earth Engine?
 
 ### 1. Kliens kontra szerver
 
-Fontos megkülönböztetni az **EE objektumokat** más JavaScript objektumoktól vagy elemi grafikus objektumoktól (ún. primitívek), amelyek a kódban lehetnek. A szerveren található objektumokat kliens oldali **„proxy” objektumok** (tárolók) manipulálásával lehet változtatni.  A webböngészőt hívjuk kliensnek: esetünkben ez a Google Earth Engine API. **Minden „ee”-vel kezdődő dolog egy proxy objektum.** Ezek nem tartalmaznak semmilyen tényleges adatot, mert ezek csupán a szerveren található objektumok kezelői. Ezek tartalmazzák, hogy mely adatokon milyen műveleteket akarunk elvégeztetni a szerverrel.
+Fontos megkülönböztetni az **EE objektumokat** más JavaScript objektumoktól vagy elemi grafikus objektumoktól (ún. primitívek), amelyek a kódban lehetnek. A szerveren található objektumokat kliens oldali **„proxy” objektumok** (tárolók) manipulálásával lehet változtatni.  A webböngészőt hívjuk kliensnek: esetünkben ez a Google Earth Engine API. **Minden „ee”-vel kezdődő dolog egy proxy objektum.** Ezek nem tartalmaznak semmilyen tényleges adatot, mert ezek csupán a szerveren található objektumok kezelői.
+ Ezek tartalmazzák, hogy mely adatokon milyen műveleteket akarunk elvégeztetni a szerverrel.
 
 A következő példában a kliensSztring sztring típusú változót becsomagoljuk egy tárolóba (az `ee.Date()` konstruktorát hívjuk meg). Ezeket a tárolókat küldjük el a szervernek feldolgozásra!
 
@@ -135,42 +139,19 @@ Map.addLayer(
 
 Fontos tudnivaló, hogy a `Map.addLayer()` segítségével a térképen kirajzolt kép eltérő bemenetekből készül a nagyítási szint és a térképnézet határaitól függően. A lépték a GEE-ben pixelméretet jelent. A GEE az elemzés / a bemenő adat léptékét a kimenetből határozza meg, amit nekünk meg kell adnunk. A GEE ugyanis **képpiramisokat** használ, ahol minden egyes cella értéke egy adott piramisszinten az alatta levő szint 2x2-es blokkjának, azaz 4 cellájának az átlagértéke. Az aggregálás egy 256x256 cella felbontású képszelvényig történik. A GEE azt a piramisszintet választja, ami **legközelebb esik az általunk megadott léptékhez** (kisebb vagy egyenlő annál), és abból számol.
 
-![2. kép: Google Earth Engine képpiramisok](/assets/gee/keppiramisok.jpg)
+![2. kép: Google Earth Engine képpiramisok
+](/assets/images/keppiramisok.jpg)
 
-<figcaption>1. táblázat: Pixelméretek a különböző nagyítási szinteknél (0-20) a Google Mercator vetülete esetén (EPSG:3857). Ha Magyarországra akarunk vonatkoztatni, akkor a földrajzi szélesség koszinuszával be kell szorozni az értékeket. Például a 12-es nagyítási szintnél: 38·cos(47°) = 25,6 m.
-</figcaption>
-<table>
-    <tr>
-        <th width="40%">Nagyítási szint
-        </th>
-        <th width="60%">Pixelméret az Egyenlítőnél
-        </th>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>76 m</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>38 m</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>19 m</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>9,6 m</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>4,8 m</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>2,4 m</td>
-    </tr>
-</table>
+
+Nagyítási szint | Pixelméret az Egyenlítőnél
+--- | ---
+11 | 76 m
+12 | 38 m
+13 | 19 m
+14 | 9,6 m
+15 | 4,8 m
+16 | 2,4 m
+[1. táblázat: Pixelméretek a különböző nagyítási szinteknél (0-20) a Google Mercator vetülete esetén (EPSG:3857). Ha Magyarországra akarunk vonatkoztatni, akkor a földrajzi szélesség koszinuszával be kell szorozni az értékeket. Például a 12-es nagyítási szintnél: 38·cos(47°) = 25,6 m.]
 
 A Google a térképek megjelenítéséhez a **Mercator** vetületet használja (WGS 84 / Pseudo-Mercator, EPSG:3857), így aztán a képpiramis megfelelő szintjén, a megjelenítést megelőzően, vetületi transzformációra kerül sor (röptében). Ha lehetséges, akkor célszerű elkerülni az egyéb vetületi transzformációkat. Meg kell hagyni az adatokat eredeti vetületükben! Az EOV nem támogatott. Ne is próbáld használni, mert rossz lesz az eredmény!
 
