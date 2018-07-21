@@ -16,7 +16,7 @@ Más felszínek (pl. aszfalt, beton) is hasonló érdességgel bírnak, mint a v
 
 A C-sávú radarok (5 GHz frekvencia vagy 5 cm hullámhossz körül) alapvetően a lágyszárú növényzettel borított vizes élőhelyeknél, míg az alacsonyabb frekvenciák (P-sáv, L-sáv) az erdőborítás alatti elárasztás detektálására használhatók (***Hess*** 1990), ugyanis az L és a P sávval ellentétben a C-sávban a radar által kibocsátott mikrohullámú sugarak nem hatolnak át a lombkoronaszinten, hanem a lombozatról verődnek vissza - a hullámhossz összemérhető a levelek méretével (***Engman*** 1996, ***Lang és Kasischke*** 2008).
 
-A vízborítás érzékelésére az azonos polarizáltságú (HH, VV) adatok alkalmasabbak. Legalkalmasabb a HH-polarizáció, de a VV szintén megfelelő választás (***Kasischke*** et al. 1997, ***Bourgeau*** et al. 2010). Bár azt is érdemes itt hozzátenni, hogy a kereszt-polarizált sávok is fontos információkat hordoznak, különösen, ha a felszínborítást akarjuk térképezni (***Baghdadi*** 2010). A különböző felszíntípusokat más visszaverődés jellemez a VV és a VH polarizáltságú sávokban.
+A vízborítás érzékelésére az azonos polarizáltságú (HH, VV) adatok alkalmasabbak. Legalkalmasabb a HH-polarizáció, de a VV szintén megfelelő választás (***Kasischke*** et al. 1997, ***Bourgeau-Chavez*** et al. 2010). Bár azt is érdemes itt hozzátenni, hogy a kereszt-polarizált sávok is fontos információkat hordoznak, különösen, ha a felszínborítást akarjuk térképezni (***Baghdadi*** 2010). A különböző felszíntípusokat más visszaverődés jellemez a VV és a VH polarizáltságú sávokban.
 
 ## A Sentinel-1 jellemzői röviden
 
@@ -320,7 +320,34 @@ save.saveCompositeBand(
 
 ## Irodalom
 
-*Feltöltés alatt...*
+* Alsdorf, D. E., E. Rodríguez, and D. P. Lettenmaier. 2007. [Measuring surface water from space.](http://onlinelibrary.wiley.com/doi/10.1029/2006RG000197/full) *Reviews of Geophysics* 45(2)
+
+* Baghdadi, N., M. Bernier, R. Gauthier, and I. Neeson. 2010. Evaluation of C-band SAR data for wetlands mapping. *International Journal of Remote Sensing* 22(1): 71-88.
+
+* Bourgeau-Chavez, L. L., E. S. Kasischke, S. M. Brunzell, J. P. Mudd, K. B. Smith, and A. L. Frick. 2010. Analysis of space-borne SAR data for wetland mapping in Virginia riparian ecosystems. *International Journal of Remote Sensing* 22(18): 3665-3687.
+
+* Engman, E. T. 1996. Remote sensing applications to hydrology: future impact. *Hydrological Sciences Journal* 41(4): 637-647.
+
+* Google Earth Engine Team. 2015. Google Earth Engine: [A planetary-scale geospatial analysis platform.](https://earthengine.google.com)
+
+* Hess, L. L., J. M. Melack, and D. S. Simonett. 1990. Radar detection of flooding beneath the forest canopy: a review. *International Journal of Remote Sensing* 11(7): 1313-1325.
+
+* Kasischke, E. S., J. M. Melack, and M. C. Dobson. 1997. The use of imaging radars for ecological applications—A review. *Remote Sensing of Environment* 59(2): 141-156.
+
+* Lang, M. W., and E. S. Kasischke. 2008. Using C-Band Synthetic Aperture Radar Data to Monitor Forested Wetland Hydrology in Maryland's Coastal Plain, USA.  *IEEE Transactions on Geoscience and Remote Sensing* 46(2): 535-546.
+
+* Lee, J. S. (1980) Digital image enhancement and noise filtering by use of local statistics. *IEEE Trans. on Pattern Analysis and Machine Intelligence* 2 (2): 165-168.
+
+* Lee, J. S. (1981) Refined filtering of image noise using local statistics. *Computer Vision, Graphics,
+and Image Processing* 15: 380-389.
+
+* Torres, R., R. Snoeij, D. Geudtner, D. Bibby, M. Davidson, E. Attema, P. Potin, B. Rommen, N. Floury, M. Brown, I. N. Traver, P. Deghaye, B. Duesmann, B. Rosich, N. Miranda, C. Bruno, M. L'Abbate, R. Croci, A. Pietropaolo, M. Huchler, and F. Rostan. 2012. GMES Sentinel-1 mission. *Remote Sensing of Environment* 120: 9-24.
+
+* Yommy, A. S., R. Liu, and Wu, S. 2015. SAR Image Despeckling Using Refined Lee Filter. *Conference: 2015 7th International Conference on Intelligent Human-Machine Systems and Cybernetics (IHMSC)* 2: 260-265.
+
+
+
+
 
 ## Eredménykép
 
