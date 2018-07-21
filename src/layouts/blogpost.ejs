@@ -6,15 +6,23 @@
     <div class="bg-gray" style="width:100%">
       <div class="container p0">
         <div class="row p1">
-        <div id="article" class="mt2 mb4 p1 col-sm-8 col-sm-offset-2 bg-white border-full border-shadow"> 
-        <%- include partials/post-title %>
-        <%- body %>
-        </div>   
-      </div>
+          <div id="article" class="mt2 mb1 p1 col-sm-8 col-sm-offset-2 bg-white border-full border-shadow"> 
+          <%- include partials/post-title %>
+          <%- body %>
+          </div>   
+        </div>
+        <div class="row">
+          <div class="mb3 col-sm-8 col-sm-offset-2 align-center">
+            <a href="/index.html" class="btn btn-lg small no-underline uppercase">Főoldal</a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
   <%- include partials/footer %>
   <%- include partials/bootstrap %>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106020833-1"></script>
+  <script src="/assets/scripts/tracker.js"></script>
 </body>
 </html>
