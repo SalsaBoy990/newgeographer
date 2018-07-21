@@ -20,7 +20,7 @@ A vízborítás érzékelésére az azonos polarizáltságú (HH, VV) adatok alk
 
 ## A Sentinel-1 jellemzői röviden
 
-Két poláris pályán keringő műholdon (a 2014 áprilisa óta üzemelő Sentinel 1A és a 2016 áprilisa óta operáló Sentinel 1B) található C-SAR berendezés szolgáltatja az adatokat. A radar mind horizontálisan, mind pedig vertikálisan polarizált mikrohullámokat tud kibocsátani, illetve fogadni. A fő felvételezési mód az ún. Interferometrikus Szélessáv mód (Interferometric Wide Swath), ami egy 250 km-es sávban történő felvételezést jelent. Geometriai felbontás: 20*22 méter, amit 10 méterre mintáznak át. A szárazföld felett VH és VV polarizáltságú sávokban készül a műholdkép. A vetületi rendszer WGS84. Az időfelbontás 6 nap (***Torres*** et al. 2012).
+Két poláris pályán keringő műholdon (a 2014 áprilisa óta üzemelő Sentinel 1A és a 2016 áprilisa óta operáló Sentinel 1B) található C-SAR berendezés szolgáltatja az adatokat. A radar mind horizontálisan, mind pedig vertikálisan polarizált mikrohullámokat tud kibocsátani, illetve fogadni. A fő felvételezési mód az ún. Interferometrikus Szélessáv mód (Interferometric Wide Swath), ami egy 250 km-es sávban történő felvételezést jelent. Geometriai felbontás: 20*22 méter, amit 10 méterre mintáznak át. A szárazföld felett VH és VV polarizáltságú sávokban készül a műholdkép. A vetületi rendszer WGS84. Az időfelbontás 6 nap (***Torres*** et al. 2012). A Level-1 Ground Range Detected (GRD) adatokat használtam.
 
 ## Az adatok feldolgozása a Google Earth Engine-nel
 
@@ -45,7 +45,9 @@ Az utolsó lépés a vizsgált időszakra vonatkozó átlagképek számítása v
 
 ## A korrigált adatok automatikus osztályozása
 
+A wekaKMeans klasztarezési algoritmust használtam, ami egy továbbfejlesztett kmeans típusú kemény osztályozás (Arthur és Vassilvitskii. Az osztályközepektől való eltéréseken alapul, csakúgy, mint az ISODATA eljárás. A wekaKmeans a kezdeti osztályközepeket random mintákból számítja.
 
+Távolság függvénynek az euklideszi távolságot használtam. A kimenő klaszterek számát 15-re állítottam. A tapasztalatok szerint a -17--18 decibel körüli klaszterközéppel rendelkező osztályok vízborítást reprezentálnak.
 
 
 
