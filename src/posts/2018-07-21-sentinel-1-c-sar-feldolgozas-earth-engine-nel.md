@@ -360,9 +360,9 @@ Radar remote sensing and surface scattering and emission theory. Addison-Wesley 
 
 2015 márciusában a leszálló pályán készült felvételek alapján összesen 2237,1 ha felszíni vízborítás volt a Felső-Kiskunsági Tavak területén.
 
-![1. ábra: S-1 kompozitkép, 2015. március. (Red: VH sáv, Green: VV sáv, Blue: VV sáv)]()
+![1. ábra: S-1 kompozitkép, 2015. március. (Red: VH sáv, Green: VV sáv, Blue: VV sáv)](/assets/images/201503_DESC_comp.jpg)
 
-![2. ábra: Az osztályozás eredménye a vízborítással, 2015. március.]()
+![2. ábra: Az osztályozás eredménye a vízborítással, 2015. március.](/assets/images/201503_DESC_water.jpg)
 
 
 
