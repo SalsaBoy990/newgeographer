@@ -345,6 +345,8 @@ save.saveCompositeBand(
 * Lee, J. S. (1981) Refined filtering of image noise using local statistics. *Computer Vision, Graphics,
 and Image Processing* 15: 380-389.
 
+* Saha, S., et al. 2011. [The NCEP Climate Forecast System Reanalysis.](https://journals.ametsoc.org/doi/pdf/10.1175/2010BAMS3001.1) *Bulletin of American Meteorological Society*, 91, 1015-1057. doi: 10.1175/2010BAMS3001.1
+
 * Torres, R., R. Snoeij, D. Geudtner, D. Bibby, M. Davidson, E. Attema, P. Potin, B. Rommen, N. Floury, M. Brown, I. N. Traver, P. Deghaye, B. Duesmann, B. Rosich, N. Miranda, C. Bruno, M. L'Abbate, R. Croci, A. Pietropaolo, M. Huchler, and F. Rostan. 2012. GMES Sentinel-1 mission. *Remote Sensing of Environment* 120: 9-24.
 
 * Ulaby, F. T., Moore, R. K., and Fung, A. K. 1982. Microwave remote sensing: active and passive. Vol. 2,
