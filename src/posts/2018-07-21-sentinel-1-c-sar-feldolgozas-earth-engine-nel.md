@@ -10,7 +10,7 @@ A Sentinel-1 C-sávú szintetikus apertúrájú radaradatokat a Duna-Tisza közi
 
 ## Néhány fontos tudnivaló
 
-Térjünk máris a szakmai dolgokra! Teljesen világos, hogy az optikai műholdak nem alkalmasak monitoringra a légköri zavaró hatások (aeroszol, felhőborítás, felhőárnyék) és egyéb okok miatt. A radarok esetén azonban a mikrohullámok szinte akadály nélkül áthatolnak még a vastag felhőzeten is. Viszont nem állja meg a helyét az állítás, hogy teljesen időjárás-függetlenek lennének. Mert nem azok! A legsúlyosabb problémát a szél jelenti, ugyanis a szélsebesség és a felszín érdessége között kapcsolat áll fenn. Például az erős szélben a vízfelszínen hullámok alakulnak ki, amelyek növelik a vízfelszín érdességét, nagyobb visszaverődést eredményezve a szenzor felé (***Alsdorf*** et al. 2007). Így a vízfelszín detektálásához ezt a problémát kezelni kell, ugyanis a szél a radarképen "elmoshat" bizonyos vízfelszíni elemeket (a vízfelszínre nagyon alacsony visszaverődés jellemző és ezt növeli meg a szél).
+Térjünk rá máris a szakmai dolgokra! Teljesen világos, hogy az optikai műholdak nem alkalmasak monitoringra a légköri zavaró hatások (aeroszol, felhőborítás, felhőárnyék) és egyéb okok miatt. A radarok esetén azonban a mikrohullámok szinte akadály nélkül áthatolnak még a vastag felhőzeten is. Viszont nem állja meg a helyét az állítás, hogy teljesen időjárás-függetlenek lennének. Mert nem azok! A legsúlyosabb problémát a szél jelenti, ugyanis a szélsebesség és a felszín érdessége között kapcsolat áll fenn. Például az erős szélben a vízfelszínen hullámok alakulnak ki, amelyek növelik a vízfelszín érdességét, nagyobb visszaverődést eredményezve a szenzor felé (***Alsdorf*** et al. 2007). Így a vízfelszín detektálásához ezt a problémát kezelni kell, ugyanis a szél a radarképen "elmoshat" bizonyos vízfelszíni elemeket (a vízfelszínre nagyon alacsony visszaverődés jellemző és ezt növeli meg a szél).
 
 Más felszínek (pl. aszfalt, beton) is hasonló érdességgel bírnak, mint a vízfelszínek, ezért ezek is összetéveszthetők a nagyon hasonló vagy teljesen azonos visszaszórási értékek miatt. Bár ezen felületek kimaszkolása könnyedén megoldható.
 
@@ -24,7 +24,7 @@ Két poláris pályán keringő műholdon (a 2014 áprilisa óta üzemelő Senti
 
 ## Az adatok feldolgozása a Google Earth Engine-nel
 
-Az Erath Engine adatbázisa már elő-feldolgozott radarképeket tartalmaz. Az alábbi elő-feldolgozási lépéseket végezték el a Sentinel-1 Toolbox szoftver implementációja alapján (***Google Earth Engine Team*** 2015):
+Az Earth Engine adatbázisa már elő-feldolgozott radarképeket tartalmaz. Az alábbi elő-feldolgozási lépéseket végezték el a Sentinel-1 Toolbox szoftver implementációja alapján (***Google Earth Engine Team*** 2015):
 
 1. Pályaadatokkal való korrekció
 2. Háttérzaj eltávolítása zajvektorok segítségével (a kép szélein látható sötét sávok érvénytelen adatokkal)
