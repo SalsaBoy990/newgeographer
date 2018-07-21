@@ -320,11 +320,11 @@ save.saveCompositeBand(
 
 ## Irodalom
 
-Feltöltés alatt...
+*Feltöltés alatt...*
 
 ## Eredménykép
 
-Feltöltés alatt...
+*Feltöltés alatt...*
 
 
 
