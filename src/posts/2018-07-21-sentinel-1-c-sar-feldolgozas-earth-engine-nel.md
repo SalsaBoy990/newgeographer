@@ -43,11 +43,17 @@ A következő lépés volt a tüskeszűrés (speckle filtering), amire az által
 
 Az utolsó lépés a vizsgált időszakra vonatkozó átlagképek számítása volt. Most havi léptékben vizsgálódom, de tetszés szerint lehet más időszakra is átlagolni. Ez a lépés tovább javítja a kép minőségét. Külön csináltam átlagképet az emelkedő pályán (tehát amikor a műhold az Egyenlítő felől halad a sarkok felé) és a süllyedő pályán (északról délre) készült felvételekből. Soha ne keverd a különböző pályán készült felvételeket!
 
-## A korrigált adatok automatikus osztályozása
+## A korrigált adatok automatikus osztályozása, az eredmények exportálása
 
-A wekaKMeans klasztarezési algoritmust használtam, ami egy továbbfejlesztett kmeans típusú kemény osztályozás (Arthur és Vassilvitskii. Az osztályközepektől való eltéréseken alapul, csakúgy, mint az ISODATA eljárás. A wekaKmeans a kezdeti osztályközepeket random mintákból számítja.
+A wekaKMeans klasztarezési algoritmust használtam, ami egy továbbfejlesztett kmeans típusú kemény osztályozás (Arthur és Vassilvitskii. Az osztályközepektől való eltéréseken alapul, csakúgy, mint az ISODATA eljárás. A wekaKmeans a kezdeti osztályközepeket random mintákból számítja. Távolság függvénynek az euklideszi távolságot használtam. A kimenő klaszterek számát 15-re állítottam.
 
-Távolság függvénynek az euklideszi távolságot használtam. A kimenő klaszterek számát 15-re állítottam. A tapasztalatok szerint a -17--18 decibel körüli klaszterközéppel rendelkező osztályok vízborítást reprezentálnak.
+A tapasztalatok szerint a -17--18 decibel körüli klaszterközéppel rendelkező osztályok vízborítást reprezentálnak. Az eredményeket a felhasználónak kell értelmeznie. Ez a lépés nem automatizálható.
+
+Miután meghatározásra kerültek a vízborításos osztályok, újraosztályozom a az osztályozott képet az alábbiak szerint:
+* vízborítás: 1
+* nem vízborítás: 0
+
+Az utolsó lépésként pedig az újraosztályozott kép alapján kiszámítom a vízborította terület nagyságát (`reducer`-t alkalmazva). Az osztályozott képet GeoTIFF formátumban a Google Drive-ra mentem.
 
 
 
