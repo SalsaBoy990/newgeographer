@@ -322,11 +322,13 @@ save.saveCompositeBand(
 
 * Alsdorf, D. E., E. Rodríguez, and D. P. Lettenmaier. 2007. [Measuring surface water from space.](http://onlinelibrary.wiley.com/doi/10.1029/2006RG000197/full) *Reviews of Geophysics* 45(2)
 
+* Arthur, D., and Vassilvitskii, S. 2007. k-means++: the advantages of carefull seeding. In: *Proceedings of the eighteenth annual ACM-SIAM symposium on Discrete algorithms*, 1027-1035.
+
 * Baghdadi, N., M. Bernier, R. Gauthier, and I. Neeson. 2010. Evaluation of C-band SAR data for wetlands mapping. *International Journal of Remote Sensing* 22(1): 71-88.
 
 * Bourgeau-Chavez, L. L., E. S. Kasischke, S. M. Brunzell, J. P. Mudd, K. B. Smith, and A. L. Frick. 2010. Analysis of space-borne SAR data for wetland mapping in Virginia riparian ecosystems. *International Journal of Remote Sensing* 22(18): 3665-3687.
 
-* Elyouncha, A., Neyt, X., Stoffelen, A., and Verspeek, J. 2015. [Assessment of the corrected CMOD6 GMF using scatterometer data.](https://www.researchgate.net/publication/294087730_Assessment_of_the_corrected_CMOD6_GMF_using_scatterometer_data) *Proceedings of SPIE 9638, Remote Sensing of the Ocean, Sea Ice, Coastal Waters, and Large Water Regions*, 11 p.
+* Elyouncha, A., Neyt, X., Stoffelen, A., and Verspeek, J. 2015. [Assessment of the corrected CMOD6 GMF using scatterometer data.](https://www.researchgate.net/publication/294087730_Assessment_of_the_corrected_CMOD6_GMF_using_scatterometer_data) In: *Proceedings of SPIE 9638, Remote Sensing of the Ocean, Sea Ice, Coastal Waters, and Large Water Regions*, 11 p.
 
 * Engman, E. T. 1996. Remote sensing applications to hydrology: future impact. *Hydrological Sciences Journal* 41(4): 637-647.
 
@@ -350,11 +352,7 @@ Radar remote sensing and surface scattering and emission theory. Addison-Wesley 
 
 * Weiß, T. 2018. [sar-pre-processing Documentation.](https://media.readthedocs.org/pdf/multiply-sar-pre-processing/get_to_version_0.4/multiply-sar-pre-processing.pdf)
 
-* Yommy, A. S., R. Liu, and Wu, S. 2015. SAR Image Despeckling Using Refined Lee Filter. *Conference: 2015 7th International Conference on Intelligent Human-Machine Systems and Cybernetics (IHMSC)* 2: 260-265.
-
-
-
-
+* Yommy, A. S., R. Liu, and Wu, S. 2015. SAR Image Despeckling Using Refined Lee Filter. In: *Conference: 2015 7th International Conference on Intelligent Human-Machine Systems and Cybernetics (IHMSC)* 2: 260-265.
 
 ## Eredménykép
 
