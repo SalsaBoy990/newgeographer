@@ -55,7 +55,276 @@ Miután meghatározásra kerültek a vízborításos osztályok, újraosztályoz
 
 Az utolsó lépésként pedig az újraosztályozott kép alapján kiszámítom a vízborította terület nagyságát (`reducer`-t alkalmazva). Az osztályozott képet GeoTIFF formátumban a Google Drive-ra mentem.
 
+## A JavaScript kód
 
+Mivel annyira memóriaigényes feladat a tüskeszűrés és az osztályozás, két részre kellett bontanom a szkriptemet, és a részeredményt (a Lee szűrt átlagkép) az `Assets` mappámba lementeni, hogy onnan beolvasva dolgozhassak tovább az adatokon. Elsőnek a `main1` (az adatfeldolgozást végzi a Lee filtert beleértve), utána pedig a `main2` (az osztályozást végzi) szkriptet kell futtatni. Néhol szükséges lehet átírni a kódot (a mintaterület megváltoztatása, a saját Assets mappádba menteni a részeredményedet).
+
+[Ezen a linken eléred a használt kódjaimat](https://code.earthengine.google.com/?accept_repo=users/gulandras90/inlandExcessWater), de csak olvasási jogokkal rendelkezel. Ezért azt javaslom, hogy készíts saját repository-t magadnak, ahol létrehozod ugyanazokat a fájlokat, mint én és belemásolod a kódokat.
+
+**main1**:
+```javascript
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ * +++++                      Sentinel-1 Processing Tool                    ++++++
+ * +++++                      Author: András Gulácsi                        ++++++
+ * +++++                      Date: July 21, 2018                           ++++++
+ * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ */
+
+
+// Import date functions module
+var date = require('users/gulandras90/inlandExcessWater:inputDate');
+
+// Import Refined Lee speckle filtering module
+var lee = require('users/gulandras90/inlandExcessWater:process/refinedLeeFilter');
+
+// Import Refined Lee speckle filtering module
+var save = require('users/gulandras90/inlandExcessWater:exportData');
+
+// Add rectangle (the study area)
+var region = ee.Geometry.Rectangle(19.1223, 46.7513, 19.2341, 46.8884);
+
+// Create a Feature object using the rectangle
+var studyArea = ee.Feature(region, { name: 'Felső-Kiskun lakes'});
+
+// Show object properies in the Console
+print(studyArea);
+
+// Sets the map view to the center of the study area
+Map.centerObject(studyArea);
+
+
+// Loads the Sentinel-1 image collection (class instantiation)
+var sentinel1 = ee.ImageCollection('COPERNICUS/S1_GRD');
+
+/* Coordinate pairs, set start and end date
+ * for filtering the collection */
+var point = ee.Geometry.Point(19.1753, 46.8156);
+
+
+// User input for filtering ImageCollection by date (year, month)
+var dateInput = date.dateInput();
+
+print(dateInput.finish);
+print(dateInput.daysInMonth);
+
+
+// Filtering based on metadata properties
+var vh = sentinel1
+  // Filter to get images with VV and VH dual polarization.
+  .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VV'))
+  .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VH'))
+  // Filter to get images collected in interferometric wide swath mode.
+  .filter(ee.Filter.eq('instrumentMode', 'IW'))
+  .filterBounds(point)
+  .filterDate(dateInput.start, dateInput.finish);
+
+print(vh);
+
+var path = prompt('Which path you want to process (1: ASCENDING, 2: DESCENDING)?', '2');
+
+var vhDescending;
+var pathString;
+if(path === '1') {
+  // Filter to get images from different look angles.
+  vhDescending = vh.filter(ee.Filter.eq('orbitProperties_pass', 'ASCENDING'));
+  pathString = 'ASC';
+} else if (path === '2') {
+  // Filter to get images from different look angles.
+  vhDescending = vh.filter(ee.Filter.eq('orbitProperties_pass', 'DESCENDING'));
+  pathString = 'DESC';
+} else {
+  pathString = null;
+  throw new Error('Wrong user input', 'Allowed options (1: ASCENDING, 2: DESCENDING)');
+}
+
+
+// Use descending path only, do not mix it with ascending path!
+var vhDescending = vhDescending.map(toGammaVV);
+vhDescending = vhDescending.map(toGammaVH);
+print(vhDescending);
+
+// Function to apply angle correction (for VV)
+function toGammaVV(image) {
+ return image.addBands(image.select('VV').subtract(image.select('angle')
+  .multiply(Math.PI/180.0).cos().log10().multiply(10.0)).rename('VV_corr'));
+}
+// Function to apply angle correction (for VH)
+function toGammaVH(image) {
+ return image.addBands(image.select('VH').subtract(image.select('angle')
+  .multiply(Math.PI/180.0).cos().log10().multiply(10.0)).rename('VH_corr'));
+}
+
+
+// Get date properties from the image collection
+var dates = vhDescending.map(function(image) {
+  return image.set('date', image.date().format('Y-MM-dd'));
+});
+
+// Get a list of the dates.
+var datesList = dates.aggregate_array('date');
+
+
+
+// Get data from CFSV2: NCEP Climate Forecast System Version 2, 6-Hourly Products
+// for the wind mask to eliminate surface roughening by wind
+var ws = ee.List(datesList).map(function (date) {
+  var wx = ee.ImageCollection('NOAA/CFSV2/FOR6H').filterDate(date);
+  var vWind = wx.select(['v-component_of_wind_height_above_ground']);
+  var a = vWind.max();
+  var uWind = wx.select(['u-component_of_wind_height_above_ground']);
+  var b = uWind.max();
+  a = a.pow(2);
+  b = b.pow(2);
+  var ab = a.add(b);
+  var ws = ab.sqrt();
+  ws = ws.multiply(3.6);
+  return ws.rename('windy').set('date', date);
+});
+
+print(ws);
+print(dates);
+
+
+// Define an inner join.
+var innerJoin = ee.Join.inner();
+
+// Specify an equals filter for image dates
+var filterDateEq = ee.Filter.equals({
+  leftField: 'date',
+  rightField: 'date'
+});
+
+// Apply the join. We have to join the wind data with the Sentinel-1 data
+// in order to apply a mask on VV and VH bands!
+var innerJoined = innerJoin.apply(dates, ee.ImageCollection(ws), filterDateEq);
+print(innerJoined);
+
+// Concatenate images to create an ImageCollection
+var joinedS1pol = innerJoined.map(function(feature) {
+  return ee.Image.cat(feature.get('primary'), feature.get('secondary'));
+});
+print(joinedS1pol);
+
+// We need an explicit cast to ImageCollection so that GEE can understand the type to work with
+var joinedS1pol = ee.ImageCollection(joinedS1pol);
+
+
+// update mask to exlude areas where where the wind speed is >= 12 m/s
+function windMask(image) {
+  var mask = ee.Image(0).where(image.select('windy').lt(1), 1).not();
+  return image.updateMask(mask);
+}
+
+var joinedS1pol = joinedS1pol.map(windMask);
+print(joinedS1pol);
+
+//Map.addLayer(joinedS1pol.first().clip(studyArea));
+
+// Create a monthly composite from means at different polarizations and look angles.
+var leeFiltered = ee.Image.cat([
+  lee.toDB(
+    lee.refinedLee(
+      lee.toNatural(
+        joinedS1pol.select('VH_corr').mean()
+      )
+    )
+  ),
+  lee.toDB(
+    lee.refinedLee(
+      lee.toNatural(
+        joinedS1pol.select('VV_corr').mean()
+      )
+    )
+  )
+]).clip(studyArea);
+
+print(leeFiltered);
+Map.addLayer(leeFiltered);
+
+// Outline for the study area
+Map.addLayer(ee.Image().paint(region, 0, 2), {}, 'Study Area');
+
+
+// Save leeFiltered VH and VV bands
+// Export the image to an Earth Engine asset.
+Export.image.toAsset({
+  image: leeFiltered,
+  description: 'Sentinel_1_lee_' + pathString + '_' + dateInput.year + dateInput.month,
+  assetId: 'Sentinel_1_lee_' + pathString + '_' + dateInput.year + dateInput.month,
+  scale: 10,
+  region: region
+});
+```
+
+**main2**:
+```javascript
+// Add rectangle (the study area)
+var region = ee.Geometry.Rectangle(19.1223, 46.7513, 19.2341, 46.8884);
+
+// Create a Feature object using the rectangle
+var studyArea = ee.Feature(region, { name: 'Felső-Kiskun lakes'});
+
+// Import Refined Lee speckle filtering module
+var save = require('users/gulandras90/inlandExcessWater:exportData');
+
+// Import Classifier module
+var classifier = require('users/gulandras90/inlandExcessWater:process/classifier');
+
+// Import Classifier module
+var chartClusters = require('users/gulandras90/inlandExcessWater:utils/chart-clusters');
+
+// Load the image to classify
+var image = ee.Image('users/gulandras90/sentinel1_radar_lee/Sentinel_1_lee_DESC_201503');
+
+Map.addLayer(image);
+
+// Classify the image
+var classifiedData = classifier.radarClassifier(image, region, 10, 'clusters');
+
+// Plot clusters by backscatter mean values to inspect water classes.
+chartClusters.plotClustersByBackscatter(
+  image,
+  classifiedData,
+  studyArea
+);
+
+// Outline for the study area
+Map.addLayer(ee.Image().paint(region, 0, 2), {}, 'Study Area');
+
+var reclassified = ee.Image(0).where(classifiedData.eq(5).or(classifiedData.eq(14)), 1).rename('water').clip(studyArea);
+Map.addLayer(reclassified, { min: 0, max: 1}, 'Water cover');
+
+print(reclassified);
+
+
+// Calculate area of clusters
+var areaChart = ui.Chart.image.byClass({
+  image: ee.Image.pixelArea().addBands(reclassified.select('water')),
+  classBand: 'water', 
+  region: studyArea,
+  scale: 10,
+  reducer: ee.Reducer.sum()
+});
+
+print(areaChart);
+
+save.saveCompositeBand(
+  reclassified,
+  10,
+  'Sentinel_1_water_DESC_',
+  '2015',
+  '03',
+  studyArea
+);
+```
+
+## Irodalom
+
+Feltöltés alatt...
+
+## Eredménykép
+
+Feltöltés alatt...
 
 
 
