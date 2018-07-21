@@ -37,7 +37,7 @@ A további feldolgozási lépéseket nekem kellett végezni.
 
 Normalizálnom kellett a visszaszóródási értékeket a mikrohullámok beesési szögével, az ún. **koszinusz korrekció** segítségével. Ez rendkívül fontos! A kis beesési szögek nagyobb visszaverődést, míg a nagyobb szögek kisebb visszaverődést eredményeznek. A beesési szögekből származó eltérések nem csak egy képen belül jelentkeznek, hanem különböző szenzorok esetén, valamint eltérő felvételezési geometriák, más műholdpályák esetén is (emelkedő és süllyedő pályák). Ez nagy beesési szög varianciát okoz a különböző időben készült felvételekben. A normalizáció nélkül ezek nem hasonlíthatók össze (***Weiß*** 2018).
 
-A szeles időben készült radarfelvételeket ki kellett zárnom a vizsgálatból, így a szél általi felszíni érdesség hatásokat kiküszöböltem. Az **1 m/s feletti** szélsebességű területeket ki kellett maszkolni. Erre a célra rendelkezésre álltak a `CFSV2: NCEP Climate Forecast System Version 2, 6-Hourly Products` klimatológiai adatok, melyekből kinyerhetjük a szélsebességet (a `v` és az `u` komponensek felhasználásával).
+A szeles időben készült radarfelvételeket ki kellett zárnom a vizsgálatból, így a szél általi felszíni érdesség hatásokat kiküszöböltem. Az **1 m/s feletti** szélsebességű területeket ki kellett maszkolni. Erre a célra rendelkezésre álltak a `CFSV2: NCEP Climate Forecast System Version 2, 6-Hourly Products` klimatológiai adatok (***Saha*** et al. 2011), melyekből kinyerhetjük a szélsebességet (a `v` és az `u` komponensek felhasználásával).
 
 A következő lépés volt a tüskeszűrés (speckle filtering), amire az általánosan használt Refined Lee filtert alkalmaztam ***Yommy, Liu, és Wu*** (2015) JavaScript kódja alapján (SNAP 3.0 S1TBX szoftver implemetációjával egyenértékű változat). Ezzel a radarképen látható szemcsés zajt redukálhatjuk le.
 
@@ -45,9 +45,9 @@ Az utolsó lépés a vizsgált időszakra vonatkozó átlagképek számítása v
 
 ## A korrigált adatok automatikus osztályozása, az eredmények exportálása
 
-A wekaKMeans klasztarezési algoritmust használtam, ami egy továbbfejlesztett kmeans típusú kemény osztályozás (Arthur és Vassilvitskii. Az osztályközepektől való eltéréseken alapul, csakúgy, mint az ISODATA eljárás. A wekaKmeans a kezdeti osztályközepeket random mintákból számítja. Távolság függvénynek az euklideszi távolságot használtam. A kimenő klaszterek számát 15-re állítottam.
+A `wekaKMeans` klasztarezési algoritmust használtam, ami egy továbbfejlesztett kmeans típusú kemény osztályozás (***Arthur és Vassilvitskii*** 2007). Az osztályközepektől való eltéréseken alapul, csakúgy, mint az ISODATA eljárás. A `wekaKmeans` a kezdeti osztályközepeket random mintákból számítja. Távolság függvénynek az euklideszi távolságot használtam. A kimenő klaszterek számát 15-re állítottam.
 
-A tapasztalatok szerint a -17--18 decibel körüli klaszterközéppel rendelkező osztályok vízborítást reprezentálnak. Az eredményeket a felhasználónak kell értelmeznie. Ez a lépés nem automatizálható.
+A tapasztalatok szerint a `-17--18 dB` körüli klaszterközéppel rendelkező osztályok vízborítást reprezentálnak. Az eredményeket a felhasználónak kell értelmeznie. Ez a lépés nem automatizálható.
 
 Miután meghatározásra kerültek a vízborításos osztályok, újraosztályozom a az osztályozott képet az alábbiak szerint:
 * vízborítás: 1
