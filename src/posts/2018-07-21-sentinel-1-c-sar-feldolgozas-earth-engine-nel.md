@@ -35,7 +35,7 @@ Az Earth Engine adatbázisa már előfeldolgozott radarképeket tartalmaz. Az al
 
 A további feldolgozási lépéseket nekem kellett végezni.
 
-Normalizálnom kellett a visszaszóródási értékeket a mikrohullámok beesési szögével, az ún. **koszinusz korrekció** segítségével. Ez rendkívül fontos! A kis beesési szögek nagyobb visszaverődést, míg a nagyobb szögek kisebb visszaverődést eredményeznek. A beesési szögekből származó eltérések nem csak egy képen belül jelentkeznek, hanem különböző szenzorok esetén, valamint eltérő felvételezési geometriák, más műholdpályák esetén is (emelkedő és süllyedő pályák). Ez nagy beesési szög varianciát okoz a különböző időben készült felvételekben. A normalizáció nélkül ezek nem hasonlíthatók össze (***Weiß*** 2018).
+Normalizálnom kellett a visszaszóródási értékeket a mikrohullámok beesési szögével, az ún. **koszinusz korrekció** segítségével (***Ulaby*** et al. 1982). Ez rendkívül fontos! A kis beesési szögek nagyobb visszaverődést, míg a nagyobb szögek kisebb visszaverődést eredményeznek. A beesési szögekből származó eltérések nem csak egy képen belül jelentkeznek, hanem különböző szenzorok esetén, valamint eltérő felvételezési geometriák, más műholdpályák esetén is (emelkedő és süllyedő pályák). Ez nagy beesési szög varianciát okoz a különböző időben készült felvételekben. A normalizáció nélkül ezek nem hasonlíthatók össze (***Weiß*** 2018).
 
 A szeles időben készült radarfelvételeket ki kellett zárnom a vizsgálatból, így a szél általi felszíni érdesség hatásokat kiküszöböltem (***Elyouncha*** et al. 2015). Az **1 m/s feletti** szélsebességű területeket ki kellett maszkolni. Erre a célra rendelkezésre álltak a `CFSV2: NCEP Climate Forecast System Version 2, 6-Hourly Products` klimatológiai adatok (***Saha*** et al. 2011), melyekből kinyerhetjük a szélsebességet (a `v` és az `u` komponensek felhasználásával). Ezek a szélsebesség-adatok a felszín felett 10 méterre vonatkoznak.
 
@@ -326,6 +326,8 @@ save.saveCompositeBand(
 
 * Bourgeau-Chavez, L. L., E. S. Kasischke, S. M. Brunzell, J. P. Mudd, K. B. Smith, and A. L. Frick. 2010. Analysis of space-borne SAR data for wetland mapping in Virginia riparian ecosystems. *International Journal of Remote Sensing* 22(18): 3665-3687.
 
+* Elyouncha, A., Neyt, X., Stoffelen, A., and Verspeek, J. 2015. [Assessment of the corrected CMOD6 GMF using scatterometer data.](https://www.researchgate.net/publication/294087730_Assessment_of_the_corrected_CMOD6_GMF_using_scatterometer_data) *Proceedings of SPIE 9638, Remote Sensing of the Ocean, Sea Ice, Coastal Waters, and Large Water Regions*, 11 p.
+
 * Engman, E. T. 1996. Remote sensing applications to hydrology: future impact. *Hydrological Sciences Journal* 41(4): 637-647.
 
 * Google Earth Engine Team. 2015. Google Earth Engine: [A planetary-scale geospatial analysis platform.](https://earthengine.google.com)
@@ -342,6 +344,11 @@ save.saveCompositeBand(
 and Image Processing* 15: 380-389.
 
 * Torres, R., R. Snoeij, D. Geudtner, D. Bibby, M. Davidson, E. Attema, P. Potin, B. Rommen, N. Floury, M. Brown, I. N. Traver, P. Deghaye, B. Duesmann, B. Rosich, N. Miranda, C. Bruno, M. L'Abbate, R. Croci, A. Pietropaolo, M. Huchler, and F. Rostan. 2012. GMES Sentinel-1 mission. *Remote Sensing of Environment* 120: 9-24.
+
+* Ulaby, F. T., Moore, R. K., and Fung, A. K. 1982. Microwave remote sensing: active and passive. Vol. 2,
+Radar remote sensing and surface scattering and emission theory. Addison-Wesley Reading, MA.
+
+* Weiß, T. 2018. [sar-pre-processing Documentation.](https://media.readthedocs.org/pdf/multiply-sar-pre-processing/get_to_version_0.4/multiply-sar-pre-processing.pdf)
 
 * Yommy, A. S., R. Liu, and Wu, S. 2015. SAR Image Despeckling Using Refined Lee Filter. *Conference: 2015 7th International Conference on Intelligent Human-Machine Systems and Cybernetics (IHMSC)* 2: 260-265.
 
