@@ -35,13 +35,17 @@ Az Erath Engine adatbázisa már elő-feldolgozott radarképeket tartalmaz. Az a
 
 A további feldolgozási lépéseket nekem kellett végezni.
 
-Normalizálnom kellett a visszaszóródási értékeket a mikrohullámok beesési szögével, az ún. koszinusz korrekció segítségével.
+Normalizálnom kellett a visszaszóródási értékeket a mikrohullámok beesési szögével, az ún. **koszinusz korrekció** segítségével. Ez rendkívül fontos! A kis beesési szögek nagyobb visszaverődést, míg a nagyobb szögek kisebb visszaverődést eredményeznek. A beesési szögekből származó eltérések nem csak egy képen belül jelentkeznek, hanem különböző szenzorok esetén, valamint eltérő felvételezési geometriák, más műholdpályák esetén is (emelkedő és süllyedő pályák). Ez nagy beesési szög varianciát okoz a különböző időben készült felvételekben. A normalizáció nélkül ezek nem hasonlíthatók össze (Weiß 2018).
 
-A szeles időben készült radarfelvételeket ki kellett zárnom a vizsgálatból, így a szél általi felszíni érdesség hatásokat kiküszöböltem. Az 1 m/s feletti szélsebességű területeket ki kellett maszkolni.
+A szeles időben készült radarfelvételeket ki kellett zárnom a vizsgálatból, így a szél általi felszíni érdesség hatásokat kiküszöböltem. Az **1 m/s feletti** szélsebességű területeket ki kellett maszkolni. Erre a célra rendelkezésre álltak a `CFSV2: NCEP Climate Forecast System Version 2, 6-Hourly Products` klimatológiai adatok, melyekből kinyerhetjük a szélsebességet (a `v` és az `u` komponens felhasználásával)
 
 A következő lépés volt a tüskeszűrés, amire az általánosan használt Refined Lee filtert alkalmaztam Yommy, Liu, és Wu 2015 JavaScript kódja alapján (SNAP 3.0 S1TBX szoftver implemetációjával egyenértékű változat)
 
-Az utolsó lépés a vizsgált időszakra vonatkozó átlagképek számítása volt. Most havi léptékben vizsgálódom, de tetszés szerint lehet más időszakra is átlagolni. Ez a lépés tovább javítja a kép minőségét.
+Az utolsó lépés a vizsgált időszakra vonatkozó átlagképek számítása volt. Most havi léptékben vizsgálódom, de tetszés szerint lehet más időszakra is átlagolni. Ez a lépés tovább javítja a kép minőségét. Külön csináltam átlagképet az emelkedő pályán (tehát amikor a műhold az Egylenítő felől halad a sarkok felé) és a süllyedő pályán (északról délre) készült felvételekből. Soha ne keverd a különböző pályán készült felvételeket!
+
+## A korrigált adatok automatikus osztályozása
+
+
 
 
 
