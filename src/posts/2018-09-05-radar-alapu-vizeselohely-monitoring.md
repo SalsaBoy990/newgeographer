@@ -100,3 +100,97 @@ Nincsen statisztikailag kimutatható különbség az emelkedő és süllyedő p�
 
 A vizsgált időszakban nem mutatható ki csökkenő trend a havi vízborításokban. 2016 és 2017 esetén a tavaszi csúcs kevésbé volt markáns a többi évhez képest. Ami még érdekesség lehet, hogy a nedvesebb években is az 500-1000 ha közötti tartományba esik vissza a felszíni vízborítás, hiába magasabb a tavaszi csúcs.
 
+### Verifikáció az MNDWI vízindex adatokkal
+
+A verifikációhoz az összes elérhető felhőmentes Landsat 8 és Sentinel-2 műholdképet felhasználtuk. Rendre 21, illetve 23 adatpontunk van, amire lineáris regressziót számoltunk. Statisztikailag szignifikáns kapcsolatokat (p << 0,001) tárt fel az elemzés. Lényegi különbség nincsen az emelkedő vagy süllyedő pályán vételezett adatok között, az eltérések fő oka az eltérő napokon való felvételezés. A Sentinel-2 adatokkal való kapcsolat kicsit gyengébb volt a Landsat 8-hoz képest. A Pearson-féle korrelációk `0,86-0,96` közöttiek, míg a Spearman-féle rangsor alapú korrelációk enyhén alulmaradnak: `0,77-0,88` (*1. táblázat*). A nagy befolyású adatpontok a csúcsvízborítás-értékek miatt a minta nem normál eloszlású, ezért a nem-parametrikus Spearman-féle korreláció a mérvadó, ugyanis az nem igényli a normál eloszlást és robusztus.
+
+## ÖSSZEFOGLALÁS
+
+A tanulmányban a Sentinel-1 C-SAR radarfelvételek alapján kidolgoztunk egy módszert a felszíni vízborítás időjárástól független érzékelésére, havi léptékben, közepes térbeli felbontással, amit verifikációképpen összevetettünk a Landsat 8 OLI és a Sentinel-2 MSI műholdképekből számolt vízborítási eredményekkel (MNDWI alapján, küszöbértékes osztályozással). *Két teljesen különböző módszerrel és, különböző hullámhossz-tartományokon közel azonos eredményeket kaptunk, magas korreláció-értékekkel, így kicsi a véletlen egybeesés valószínűsége.*
+
+A módszer további érvényesítésre szorul terepi felméréseken keresztül. A Vízügyi Igazgatóságoknak meg vannak az erőforrásai ahhoz, hogy összevethessék a radarképek alapján nyert vízborítási/belvízborítási térképeket a saját terepi felméréseikkel, így elválna, hogy mennyire bizonyul alkalmazhatónak a tanulmányunkban kidolgozott módszer. Egy pixel a radarképen 0,1 ha területnek felel meg a valóságban, tehát csak az ennél nagyobb belvízfoltok érzékelhetők. Az összes szkript kódját odaadjuk kérésre, hogy bárki reprodukálhassa az eredményeket, és más (belvizes) területeken is végezhessen kutatást.
+
+A Homokhátság szárazodása kapcsán mindig felmerül *a belvizek visszatartásának az összetett kérdése*. Bár ez a vízmennyiség elenyésző töredék ahhoz képest, ami hiányzik a vízháztartás kiegyenlítéséhez, de mégis fontos lehet a hasznosításuk a gazdák számára. A felhő alapú számítástechnika segítségével tömérdek mennyiségű és ingyenes műholdas távérzékelési adatot tudunk már gyorsan és magas fokon automatizáltan feldolgozni. A Google Earth Engine felhőplatform számítási teljesítménye rendelkezésünkre áll, hogy *egy vizes élőhely vagy belvíz monitoring rendszert működtessünk, talán a jövőben előremozdíthatná a belvizekkel való gazdálkodás ügyét is.*
+
+## IRODALOM
+
+* Alsdorf D. E., Rodríguez E., Lettenmaier D. P. (2007). Measuring surface water from space. Reviews of Geophysics 45(2), 24 p.
+
+* Arthur D., Vassilvitskii S. (2007). k-means++: the advantages of carefull seeding. In: Proceedings of the eighteenth annual ACM-SIAM symposium on Discrete algorithms, 1027-1035.
+
+* Baghdadi N., Bernier, M., Gauthier R., Neeson I. (2010). Evaluation of C-band SAR data for wetlands mapping. International Journal of Remote Sensing 22(1), 71-88.
+
+* Bourgeau-Chavez L. L., Kasischke E. S., Brunzell S. M., Mudd J. P., Smith K. B., Frick A. L. (2010). Analysis of space-borne SAR data for wetland mapping in Virginia riparian ecosystems. International Journal of Remote Sensing 22(18), 3665-3687.
+
+* Dawson T. P., Berry P. M., Kampa E. (2003). Climate change impacts on freshwater wetland habitats. Journal for Nature Conservation 11(1), 25-30.
+
+* Elyouncha A., Neyt X., Stoffelen A., Verspeek J. (2015). Assessment of the corrected CMOD6 GMF using scatterometer data. In: Proceedings of SPIE 9638, Remote Sensing of the Ocean, Sea Ice, Coastal Waters, and Large Water Regions, 11 p.
+
+* Engman E. T. (1996). Remote sensing applications to hydrology: future impact. Hydrological Sciences Journal 41(4), 637-647.
+
+* Erdélyi M. 1975. A magyar medence hidrodinamikája. Hidrológiai Közlöny 4, 147-155.
+
+* Erwin K. L. (2009). Wetlands and global climate change: the role of wetland restoration in a changing world. Wetlands Ecology and Management 17, 71-84.
+
+* Google Earth Engine Team (2015). [Google Earth Engine: A planetary-scale geospatial analysis platform](https://earthengine.google.com/).
+
+* Gorelick N., Hancher M., Dixon M., Ilyushchenko S., Thau D., Moore R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote Sensing of Environment 202, 18-27.
+
+* Gulácsi A. (2017). A vizes élőhelyek vízborítottságában bekövetkező változások vizsgálata radarfelvételekkel, a Google Earth Engine használatával. In: Interdiszciplináris tájkutatás a XXI. században, V. Blanka, Zs. Ladányi (eds.), Szegedi Tudományegyetem Földrajzi és Földtudományi Intézet, Szeged. pp. 188-199.
+
+* Hess L. L., Melack J. M., Simonett D. S. (1990). Radar detection of flooding beneath the forest canopy: a review. International Journal of Remote Sensing 11(7), 1313-1325.
+
+* Kasischke, E. S., Melack J. M., Dobson M. C. (1997). The use of imaging radars for ecological applications—A review. Remote Sensing of Environment 59(2), 141-156.
+
+* Kohán B. (2014). GIS-alapú vizsgálat a Duna–Tisza közi homokhátság szárazodásának témakörében. Doktori (Phd) értekezés. ELTE Környezet- és Tájföldrajzi Tanszék, Budapest. 138 p.
+
+* Kovács F. (2009). Változékonyság értékelése vizes élőhelyeken – műholdképek alapján. Hidrológiai Közlöny 89(2), 57-61.
+
+* Ladányi Zs. (2010). Tájváltozások értékelése a Duna–Tisza közi homokhátság egy környezetés klímaérzékeny kistáján, az Illancson. Doktori (PhD) értekezés, SZTE Környezettudományi Doktori Iskola, Szeged. 155 p.
+
+* Lang M. W., Kasischke E. S. (2008). Using C-Band Synthetic Aperture Radar Data to Monitor Forested Wetland Hydrology in Maryland's Coastal Plain, USA. IEEE Transactions on Geoscience and Remote Sensing 46(2), 535-546.
+
+* Lee J. S. (1980). Digital image enhancement and noise filtering by use of local statistics. IEEE Trans. on Pattern Analysis and Machine Intelligence 2(2), 165-168.
+
+* Lee J. S. (1981). Refined filtering of image noise using local statistics. Computer Vision, Graphics, and Image Processing 15, 380-389.
+
+* Li W., Du Z., Ling F., Zhou D., Wang H., Gui Y., Sun B., Zhang X. (2013). A Comparison of Land Surface Water Mapping Using the Normalized Difference Water Index from TM, ETM+ and ALI. Remote Sensing 5(11), 5530-5549.
+
+* Mádlné Szőnyi J., Simon Sz., Tóth J., Pogácsás Gy. (2005). Felszíni és felszín alatti vizek kapcsolata a Duna–Tisza közi Kelemen-szék és Kolon-tó esetében. Általános Földtani Szemle 30, 93-110.
+
+* McFeeters S. K. (1996). The use of the Normalized Difference Water Index (NDWI) in the delineation of open water features. International Journal of Remote Sensing 17(7), 1425–1432.
+
+* Mezősi G., Blanka V., Ladányi Zs., Bata T., Urdea P., Frank A., Meyer B. (2016). Expected mid- and long-term changes in drought hazard for the South-Eastern Carpathian Basin. Carpathian Journal of Earth and Environmental Sciences 11(2), 355-366.
+
+* Pálfai I. (1994). Összefoglaló tanulmány a Duna-Tisza közi talajvízszint süllyedés okairól és a vízhiányos helyzet javításának lehetőségeiről. A Nagyalföld Alapítvány kötetei 3, Békéscsaba. pp. 111-125.
+
+* Rakonczai J. (2013). A klímaváltozás következményei a dél-alföldi tájon. (A természeti földrajz változó szerepe és lehetőségei). Akadémiai doktori értekezés, Budapest. 167 p.
+
+* Saha S. et al. 2011. The NCEP Climate Forecast System Reanalysis. Bulletin of American Meteorological Society, 91, 1015-1057.
+
+* Szalai J., Kovács J., Kovácsné Székely I. (2011). A Duna – Tisza köze csapadék és talajvízszint-adatainak vizsgálata klaszteranalízissel. In: Környezeti változások és az Alföld, J. Rakonczai (ed.), Nagyalföld Alapítvány, Békéscsaba. pp. 111-118.
+
+* Szanyi J., Kovács B. (2009). Egyesített 3D hidrodinamikai modell a felszín alatti vizek használatának fenntartható fejlesztéséhez a magyar-szerb országhatár menti régióban. INTERREG III/A HUSER0602/131.
+
+* Szilágyi J., Vörösmarty Ch. (1993). A Duna–Tisza közi talajvízszint-süllyedések okainak vizsgálata. Vízügyi Közlemények, 75(3), 280-294.
+
+* Torres R., Snoeij R., Geudtner D., Bibby D., Davidson M., Attema E., Potin P., Rommen B., Floury N., Brown M., Traver I. N., Deghaye P., Duesmann B., Rosich B., Miranda N., Bruno C., L'Abbate M., Croci R., Pietropaolo A., Huchler M., Rostan F. (2012). GMES Sentinel-1 mission. Remote Sensing of Environment 120, 9-24.
+
+* Tóth J., Almási I. (2001). Interpretation of observed fluid potential patterns in a deep sedimentary basin under tectonic compression: Hungarian Great Plain, Pannonian basin. Geofluids 1,11-36.
+
+* Ulaby F. T., Moore R. K., Fung A. K. (1982). Microwave remote sensing: active and passive. Vol. 2, Radar remote sensing and surface scattering and emission theory. Addison-Wesley Reading, MA, USA.
+
+* van Leeuwen B., Tobak Z., Kovács F., Sipos Gy. 2017. Towards a continuous inland excess water flood monitoring system based on remote sensing data. Journal of Environmental Geography 10(3-4), 9-15.
+
+* VITUKI (2006). A Duna–Tisza közi hátság hidrometeorológiai, felszíni és felszín alatti vizeinek mennyiségére vonatkozó mérő- és megfigyelőrendszer működtetése és értékelése. Zárójelentés. VITUKI Kht., Hidrológiai Intézet, Budapest.
+
+* Völgyesi I. (2006). A Homokhátság felszín alatti vízháztartása – vízpótlási és vízvisszatartási lehetőségek. http://volgyesi.uw.hu/dokuk/homokhatsag.pdf
+
+* Weiß T. (2018). [sar-pre-processing Documentation](https://media.readthedocs.org/pdf/multiply-sar-pre-processing/get_to_version_0.4/multiply-sar-pre-processing.pdf).
+
+* Xu H. (2006). Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery. International Journal of Remote Sensing 27(14), 3025-3033.
+
+* Yommy A. S., Liu R., Wu S. (2015). SAR Image Despeckling Using Refined Lee Filter. In: Conference: 2015 7th International Conference on Intelligent Human-Machine Systems and Cybernetics (IHMSC) 2, 260-265.
+
+
+
