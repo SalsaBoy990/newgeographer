@@ -114,7 +114,15 @@ A vizsgált időszakban nem mutatható ki csökkenő trend a havi vízborításo
 
 A verifikációhoz az összes elérhető felhőmentes Landsat 8 és Sentinel-2 műholdképet felhasználtuk. Rendre 21, illetve 23 adatpontunk van, amire lineáris regressziót számoltunk (*5-6. ábra*). Statisztikailag szignifikáns kapcsolatokat (p << 0,001) tárt fel az elemzés. Lényegi különbség nincsen az emelkedő vagy süllyedő pályán vételezett adatok között, az eltérések fő oka az eltérő napokon való felvételezés. A Sentinel-2 adatokkal való kapcsolat kicsit gyengébb volt a Landsat 8-hoz képest. A Pearson-féle korrelációk `0,86-0,96` közöttiek, míg a Spearman-féle rangsor alapú korrelációk enyhén alulmaradnak: `0,77-0,88` (*1. táblázat*). A nagy befolyású adatpontok a csúcsvízborítás-értékek miatt a minta nem normál eloszlású, ezért a nem-parametrikus Spearman-féle korreláció a mérvadó, ugyanis az nem igényli a normál eloszlást és robusztus.
 
-![5. ábra. Vízborítás-térképek: a 2015. februári csúcs- és a 2017. augusztusi minimális vízborítások. DESC – süllyedő pálya; ASC – emelkedő pálya. Piros vonalakkal a legnagyobb vízfelszínek/tavak a teljes vizsgált időszakra vonatkozó átlagos határvonalát jelöltem.](/assets/images/regresszio.png)
+Statisztikai kapcsolatok | Pearson-féle R-érték | Spearman-féle ρ-érték
+--- | --- | ---
+wekaKMeans_DESC ~ L8_MNDWI | 0,96*** | 0,88***
+wekaKMeans_DESC ~ S2_MNDWI | 0,83*** | 0,77***
+wekaKMeans_ASC ~ L8_MNDWI | 0,96*** | 0,79***
+wekaKMeans_ASC ~ S2_MNDWI | 0,85*** | 0,80***
+[1. táblázat: Statisztikai kapcsolatok a lineáris regresszió alapján.]
+
+![5. ábra. Lineáris regressziók (kék vonal) a radar és a vízindex alapján számolt havi vízborítások (ha) között. A piros vonal egy exponenciális illesztés, de csak tájékoztató jellegű. L8_MNDWI a Landsat 8 alapján, míg az S2_MNDWI a Sentinel-2 műholdak alapján számolt vízborítást rövidíti.](/assets/images/regresszio.png)
 
 ![6. ábra. A havi vízborítások összevetése az eltérő adatok alapján a vizsgált időszakban.](/assets/images/verifikacio.png)
 
