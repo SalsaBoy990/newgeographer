@@ -44,7 +44,7 @@ Duna–Tisza közén tapasztalható talajvízszint-süllyedés hátterében *fő
 
 A mintaterületünk (*1. ábra*), *a Felső-Kiskunsági tavak* a Duna negyedkori árterületén helyezkedik el, amit egyrészt *a Hátság területén beszivárgó vizek feláramlási területeként*, másrészt pedig a Kárpát-medence regionális áramlási rendszerébe illesztve a mélységi vizek feláramlási zónái egyikének ismerünk (***Erdélyi*** 1975, ***Tóth és Almási*** 2001, ***Mádlné*** és társai 2005, ***Szalai*** és társai 2010). Tehát a magasabb hátsági területeken a csapadékból beszivárgó víz a gravitációnak engedelmeskedve a nyugati perem felé, a tavak irányába áramlik a felszín alatt, hozzájárulva ezzel a tavak vízpótlásához. A kérdés csak az, hogy ennek a hozzáfolyásnak mekkora hatása lehet a felszíni vízborításokra? A Felső-Kiskunsági tavak területén lehulló helyi csapadéké és párolgásé, vagy a hozzáfolyásé a meghatározó szerep? Ha feltételezzük, hogy tovább csökken a Homokhátság vízutánpótlódása, akkor a fentiek szerint a tavak vízborításának is csökkennie kell. Bár az is elképzelhető, hogy nincs valós kapcsolat a kettő között.
 
-![1. ábra. A Felső-Kiskunsági tavak.)](/assets/images/mintaterulet.jpg)
+![1. ábra. A Felső-Kiskunsági tavak.](/assets/images/mintaterulet.jpg)
 
 ## ADAT ÉS MÓDSZER
 
@@ -98,7 +98,7 @@ A nagy természetes változékonyság miatt nagy kihívást jelent a felszíni v
 
 A *2. ábra* a havi vízborítások eloszlását mutatja: felül a sűrűségfüggvény, alul pedig a dobozdiagram van feltüntetve. Külön ábrázoltam a csak emelkedő és a csak süllyedő pályán készült felvételek alapján számolt borítási értékeket hektárban. Az ábráról leolvasható, hogy a havi vízborítás-értékek, az adatpontok 50%-a az 500-1000 ha közötti tartományban mozog. Ha 1000 ha-ig tekintjük az értékeket, tehát nem vesszük figyelembe a kiugró értékeket, akkor ránézésre viszonylag normál eloszlású a minta, tehát haranggörbét ír le. A kiugró értékek miatt nagy a különbség a medián és az átlag érték között. A kiugró vízborítások a tél végi vagy tavaszi vízborítási csúcsok. Az éves minimum borítások az augusztus-október közötti időszakban jelentkeznek. A tavaszi maximum és a nyár végi minimum borításértékek között többszörös a különbség.
 
-![2. ábra. A havi vízborítások sűrűségfüggvénye (fent) és az adatok ábrázolása dobozdiagramon (lent). A rövidítések magyarázata: wekaKMeans_DESC – a süllyedő pályán készült képekre végzett wekaKMeans osztályozás alapján nyert vízborítások; wekaKMeans_ASC – ugyanaz, mint az előző, csak emelkedő pályán. A kék célkeresztek a számtani átlagokat jelölik.)](/assets/images/distribution.png)
+![2. ábra. A havi vízborítások sűrűségfüggvénye (fent) és az adatok ábrázolása dobozdiagramon (lent). A rövidítések magyarázata: wekaKMeans_DESC – a süllyedő pályán készült képekre végzett wekaKMeans osztályozás alapján nyert vízborítások; wekaKMeans_ASC – ugyanaz, mint az előző, csak emelkedő pályán. A kék célkeresztek a számtani átlagokat jelölik.](/assets/images/distribution.png)
 
 Például 2015 februárjában volt a vizsgált időszakban (2014 novembere óta) a legnagyobb a víz kiterjedése: 2996 ha (a süllyedő pálya esetén) (3. ábra). Ez augusztusra 1/7-ed részére, 414 ha-ra zsugorodott össze (*3-4. ábra*). 2016-ban a csúcs 1911 ha, 2017-ben 1166 ha, míg az idén 2239 ha volt. Mindegyik márciusban. A minimum értékek voltak: 564 ha (2016. szeptember) és 351 ha (2017. augusztus). 2018-ra még nem lehet eldönteni. *Tehát a 2015-2017 közötti éveket tekintve rendre 7,2-szeres, 3,4-szeres, illetve 6,4-szeres különbség adódik.* Ez a szélsőséges változékonyság egybevág a mintaterületen végzett korábbi, Landsat műhold alapú kutatásokkal (***Kovács*** 2009).
 
@@ -106,9 +106,9 @@ Nincsen statisztikailag kimutatható különbség az emelkedő és süllyedő p�
 
 A vizsgált időszakban nem mutatható ki csökkenő trend a havi vízborításokban. 2016 és 2017 esetén a tavaszi csúcs kevésbé volt markáns a többi évhez képest. Ami még érdekesség lehet, hogy a nedvesebb években is az 500-1000 ha közötti tartományba esik vissza a felszíni vízborítás, hiába magasabb a tavaszi csúcs.
 
-![3. ábra. A havi vízborítások időbeli alakulása 2014 szeptembere és 2018 augusztusa között az emelkedő és süllyedő pálya esetén.)](/assets/images/vizboritas.png)
+![3. ábra. A havi vízborítások időbeli alakulása 2014 szeptembere és 2018 augusztusa között az emelkedő és süllyedő pálya esetén.](/assets/images/vizboritas.png)
 
-![4. ábra. Vízborítás-térképek: a 2015. februári csúcs- és a 2017. augusztusi minimális vízborítások. DESC – süllyedő pálya; ASC – emelkedő pálya. Piros vonalakkal a legnagyobb vízfelszínek/tavak a teljes vizsgált időszakra vonatkozó átlagos határvonalát jelöltem.)](/assets/images/swc_radar_maps.png)
+![4. ábra. Vízborítás-térképek: a 2015. februári csúcs- és a 2017. augusztusi minimális vízborítások. DESC – süllyedő pálya; ASC – emelkedő pálya. Piros vonalakkal a legnagyobb vízfelszínek/tavak a teljes vizsgált időszakra vonatkozó átlagos határvonalát jelöltem.](/assets/images/swc_radar_maps.png)
 
 ### Verifikáció az NDWI vízindex adatokkal
 
