@@ -3,7 +3,7 @@ title: Radar-alapú vizesélőhely-monitoring
 date: '2018-09-05'
 excerpt: >-
   A tanulmányban a Felső-Kiskunsági tavak területén vizsgáltuk a felszíni
-  vízborítás változásait 2014 szeptemberétől 2018 augusztusáig.A Hidrológiai
+  vízborítás változásait 2014. szept. és 2018 aug. között. A Hidrológiai
   Közlönybe szánt kézirat.
 topic: 'Google Earth Engine, wetlands, radar, Sentinel-1'
 ---
@@ -13,7 +13,7 @@ topic: 'Google Earth Engine, wetlands, radar, Sentinel-1'
 A Duna-Tisza közi szikes tavak, vizes élőhelyek rendkívül szélsőséges vízellátottságú területek, melyek érzékenyek az éghajlatváltozás indukálta szárazodással szemben, ugyanis ezek nagyrészt a lehulló csapadékból kapnak vízutánpótlást. A legtöbb passzív műholdas szenzor a felhőborítás és az alacsonyabb időfelbontás miatt nem alkalmas vizesélőhely-monitoringra. Viszont most már hozzáférünk a Sentinel-1 műholdak C-sávú szintetikus apertúra radarjának (C-SAR) felvételeihez, amelyek ingyenes, közepes térbeli felbontású (10 m), nagy időbeli felbontású (6 nap) és a felhőborítástól független adatokat szolgáltatnak. A tanulmányban a Felső-Kiskunsági tavak területén vizsgáltuk a felszíni vízborítás változásait 2014 szeptemberétől 2018 augusztusáig. Kidolgoztunk egy módszert a vízborítás detektálására, ami a radarképek automatikus osztályozásán alapszik. Az adatok feldolgozására a webböngészőn keresztül a Google Earth Engine felhőplatformot használtuk, amit a műholdképek és egyéb földi megfigyelési adatok feldolgozására hoztak létre. Az osztályozáshoz a wekaKmeans-nek nevezett eljárást használtuk. Verifikációképpen összevetettük az eredményül kapott vízborításokat a Landsat 8 és a Sentinel-2 műholdak adataiból számolt normalizált differenciált vízindex (NDWI, Normalized Difference Water Index) alapján meghatározott vízborításokkal. Az NDWI alapján történő lehatárolás egy küszöbértékes osztályozással történt. A küszöbértékeket vevő működési karakterisztika (angolul Receiver Operator Characteristics, ROC) eljárás segítségével kaptuk meg. Két teljesen különböző módszerrel és hullámhossz-tartományokon (radar/wekaKmeans, NDWI/ROC) közel azonos eredményeket kaptunk, magas Spearman-féle korreláció-értékekkel (ρ = 0,77-0,88).
 
 ### Kulcsszavak
-*Sentinel-1 C-SAR, radar, Google Earth Engine, vizes élőhelyek, belvíz, Homokhátság, klaszterelemzés*
+*Sentinel-1 C-SAR, radar, Google Earth Engine, vizes élőhelyek, belvíz, Homokhátság, klaszterelemzés*
 
 ## BEVEZETÉS
 
@@ -80,7 +80,8 @@ A tapasztalatok szerint a `-17- -18` dB körüli vagy alacsonyabb klaszterközé
 Miután meghatározásra kerültek a vízborításos osztályok, újraosztályoztuk az osztályozott képet az alábbiak szerint:
 
 * vízborítás: 1
-* nincs vízborítás: 0.
+* nincs vízborítás: 0
+.
 
 Az utolsó lépésként pedig az újraosztályozott kép alapján kiszámítottuk a vízzel borított terület nagyságát.
 
@@ -128,7 +129,8 @@ wekaKMeans_ASC ~ S2_MNDWI | 0,85*** | 0,80***
 
 ## ÖSSZEFOGLALÁS
 
-A tanulmányban a Sentinel-1 C-SAR radarfelvételek alapján kidolgoztunk egy módszert a felszíni vízborítás időjárástól független érzékelésére, havi léptékben, közepes térbeli felbontással, amit verifikációképpen összevetettünk a Landsat 8 OLI és a Sentinel-2 MSI műholdképekből számolt vízborítási eredményekkel (MNDWI alapján, küszöbértékes osztályozással). *Két teljesen különböző módszerrel és, különböző hullámhossz-tartományokon közel azonos eredményeket kaptunk, magas korreláció-értékekkel, így kicsi a véletlen egybeesés valószínűsége.*
+A tanulmányban a Sentinel-1 C-SAR radarfelvételek alapján kidolgoztunk egy módszert a felszíni vízborítás időjárástól független érzékelésére, havi léptékben, közepes térbeli felbontással, amit verifikációképpen összevetettünk a Landsat 8 OLI és a Sentinel-2 MSI műholdképekből számolt vízborítási eredményekkel (MNDWI alapján, küszöbértékes osztályozással). *Két teljesen különböző módszerrel és, különböző hullámhossz-tartományokon közel azonos eredményeket kaptunk, magas korreláció-értékekkel, így kicsi a véletlen egybeesés valószínűsége.
+*
 
 A módszer további érvényesítésre szorul terepi felméréseken keresztül. A Vízügyi Igazgatóságoknak meg vannak az erőforrásai ahhoz, hogy összevethessék a radarképek alapján nyert vízborítási/belvízborítási térképeket a saját terepi felméréseikkel, így elválna, hogy mennyire bizonyul alkalmazhatónak a tanulmányunkban kidolgozott módszer. Egy pixel a radarképen 0,1 ha területnek felel meg a valóságban, tehát csak az ennél nagyobb belvízfoltok érzékelhetők. Az összes szkript kódját odaadjuk kérésre, hogy bárki reprodukálhassa az eredményeket, és más (belvizes) területeken is végezhessen kutatást.
 
@@ -208,7 +210,8 @@ A Homokhátság szárazodása kapcsán mindig felmerül *a belvizek visszatartá
 
 * Völgyesi I. (2006). A Homokhátság felszín alatti vízháztartása – vízpótlási és vízvisszatartási lehetőségek. http://volgyesi.uw.hu/dokuk/homokhatsag.pdf
 
-* Weiß T. (2018). [sar-pre-processing Documentation](https://media.readthedocs.org/pdf/multiply-sar-pre-processing/get_to_version_0.4/multiply-sar-pre-processing.pdf).
+* Weiß T. (2018). [sar-pre-processing Documentation](https://media.readthedocs.org/pdf/multiply-sar-pre-processing/get_to_version_0.4/multiply-sar-pre-processing.pdf
+).
 
 * Xu H. (2006). Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery. International Journal of Remote Sensing 27(14), 3025-3033.
 
