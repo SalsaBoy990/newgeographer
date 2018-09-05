@@ -114,6 +114,10 @@ A vizsgált időszakban nem mutatható ki csökkenő trend a havi vízborításo
 
 A verifikációhoz az összes elérhető felhőmentes Landsat 8 és Sentinel-2 műholdképet felhasználtuk. Rendre 21, illetve 23 adatpontunk van, amire lineáris regressziót számoltunk (*5-6. ábra*). Statisztikailag szignifikáns kapcsolatokat (p << 0,001) tárt fel az elemzés. Lényegi különbség nincsen az emelkedő vagy süllyedő pályán vételezett adatok között, az eltérések fő oka az eltérő napokon való felvételezés. A Sentinel-2 adatokkal való kapcsolat kicsit gyengébb volt a Landsat 8-hoz képest. A Pearson-féle korrelációk `0,86-0,96` közöttiek, míg a Spearman-féle rangsor alapú korrelációk enyhén alulmaradnak: `0,77-0,88` (*1. táblázat*). A nagy befolyású adatpontok a csúcsvízborítás-értékek miatt a minta nem normál eloszlású, ezért a nem-parametrikus Spearman-féle korreláció a mérvadó, ugyanis az nem igényli a normál eloszlást és robusztus.
 
+![5. ábra. Vízborítás-térképek: a 2015. februári csúcs- és a 2017. augusztusi minimális vízborítások. DESC – süllyedő pálya; ASC – emelkedő pálya. Piros vonalakkal a legnagyobb vízfelszínek/tavak a teljes vizsgált időszakra vonatkozó átlagos határvonalát jelöltem.](/assets/images/regresszio.png)
+
+![6. ábra. A havi vízborítások összevetése az eltérő adatok alapján a vizsgált időszakban.](/assets/images/verifikacio.png)
+
 ## ÖSSZEFOGLALÁS
 
 A tanulmányban a Sentinel-1 C-SAR radarfelvételek alapján kidolgoztunk egy módszert a felszíni vízborítás időjárástól független érzékelésére, havi léptékben, közepes térbeli felbontással, amit verifikációképpen összevetettünk a Landsat 8 OLI és a Sentinel-2 MSI műholdképekből számolt vízborítási eredményekkel (MNDWI alapján, küszöbértékes osztályozással). *Két teljesen különböző módszerrel és, különböző hullámhossz-tartományokon közel azonos eredményeket kaptunk, magas korreláció-értékekkel, így kicsi a véletlen egybeesés valószínűsége.*
