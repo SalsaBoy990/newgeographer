@@ -1,0 +1,325 @@
+<div class="container-fluid p0 m0">
+  <div class="row mx-responsive p0 m0">
+    <div class="col-12 p0 clearfix">
+      <iframe class="app-height" style="margin-left: -16px;" src="https://gulandras90.users.earthengine.app/view/modis-nddi-aszalymonitoring" frameborder="0"></iframe>
+      <a class="float-right mthalf underline" data-toggle="collapse" href="#collapseForm" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        Kérdésed van?
+      </a>
+    </div>
+  </div>
+  <div class="row m-mx-responsive mx-responsive p0 m0">
+    <div class="col-12 p0 mb2">
+      <div class="collapse mt1 clearfix" id="collapseForm">
+        <div class="float-right card card-body bg-black border-full-gray pl1 pr1" style="max-width: 610px">
+          <div class="row m0 p0">
+            <div class="col-11 p0">
+              <h3 class="white-2 lh13 mt0 float-left pl1 m-p0">Küldd el az alkalmazással kapcsolatos kérdésed vagy
+                észrevételed!</h3>
+            </div>
+            <div class="col-1 p0"><button type="button" class="float-right btn exit-btn bg-error" data-toggle="collapse"
+                data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">
+                <span style="font-size: 24px; line-height: 34px;" aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <p class="light white small-size sans-serif light-gray mb2 pl1 m-p0">A visszajelzésedet az alkalmazás
+            fejlesztéséhez fogom felhasználni.</p>
+
+          <form name='contact' class='custom-form ws-validate pl1 pr1 pb1 m-p0' method='POST' action='/uzenet-elkuldve'><input
+              type='hidden' name='form-name' value='contact' />
+            <p class="hidden">
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            <div class="form-group mb1">
+              <label for="inputEmail" class="small-size expanded bold-700 uppercase light-gray3 m0">E-mail</label>
+              <br>
+              <input type="email" name="EMAIL" id="inputEmail" class="border-round" placeholder="E-mail" required style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg=='); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;" />
+            </div>
+            <div class="form-group mb1 m-mb0">
+              <label for="message" class="small-size expanded bold-700 uppercase light-gray3 mb0">Üzenet</label>
+              <br>
+              <textarea name="message" id="message" placeholder="Üzenet" required></textarea>
+            </div>
+            <div>
+              <button type="button" class="m-float-right float-left small-size light-gray bg-black underline border-none no-shadow mb1"
+                data-toggle="modal" data-target="#modalAdatvedelem" style="padding-top: 0.8rem; padding-bottom: 0.3rem;">Adatkezelési
+                tájékoztató</button>
+              <button type="submit" class="float-right btn btn-lg small-size uppercase bold-700 bg-light-green expanded">Üzenet
+                elküldése</button>
+              <!-- Modal -->
+              <div class="modal fade" id="modalAdatvedelem" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header p1">
+                      <h2 class="modal-title mt0" id="exampleModal">Adatkezelési tájékoztató<br><span class="small-size normal italic medium-gray mb2">Utolsó
+                          módosítás: 2019. június 15.</span></h2>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Bezárás">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body p1">
+                      <p>A honlap adatkezelési tájékoztatójának kialakításakor a következő jogforrásokat vettük
+                        figyelembe:</p>
+                      <ul>
+                        <li class="mbhalf"><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1532348683434&uri=CELEX:02016R0679-20160504">az
+                            Európai Parlament és a Tanács 2016/679 rendelete</a> (2016. április 27.) a természetes
+                          személyeknek a személyes adatok kezelése tekintetében történő védelméről és az ilyen adatok
+                          szabad áramlásáról, valamint a 95/46/EK rendelet hatályon kívül helyezéséről („GDPR”:
+                          „Általános Adatvédelmi Rendelet”)
+                        </li>
+                        <li class="mbhalf"><a href="https://net.jogtar.hu/jogszabaly?docid=A1100112.TV">2011. évi CXII.
+                            törvény</a> az
+                          információs önrendelkezési jogról és az információszabadságról (2011. július 26.)</li>
+                        <li><a href="https://mkogy.jogtar.hu/jogszabaly?docid=99200063.TV">1992. évi LXIII. törvény</a>
+                          a személyes adatok védelméről és a közérdekű adatok nyilvánosságáról
+                        </li>
+                      </ul>
+                      <h3>Fogalmak definíciója</h3>
+                      <p>A 2011. évi CXII. törvény 3. §-a alapján:</p>
+
+                      <ul>
+                        <li class="mbhalf"><b>Adatfeldolgozó:</b> az a természetes vagy jogi személy, illetve jogi
+                          személyiséggel nem
+                          rendelkező szervezet, aki vagy amely - törvényben vagy az Európai Unió kötelező jogi
+                          aktusában meghatározott keretek között és feltételekkel - az adatkezelő megbízásából vagy
+                          rendelkezése alapján személyes adatokat kezel.
+                        </li>
+                        <li class="mbhalf"><b>Adatkezelő:</b> az a természetes vagy jogi személy, illetve jogi
+                          személyiséggel nem
+                          rendelkező szervezet, aki vagy amely - törvényben vagy az Európai Unió kötelező jogi
+                          aktusában meghatározott keretek között - önállóan vagy másokkal együtt az adat kezelésének
+                          célját meghatározza, az adatkezelésre (beleértve a felhasznált eszközt) vonatkozó döntéseket
+                          meghozza és végrehajtja, vagy az adatfeldolgozóval végrehajtatja.
+                        </li>
+                        <li class="mbhalf"><b>Adatkezelés:</b> az alkalmazott eljárástól függetlenül az adaton végzett
+                          bármely művelet
+                          vagy a műveletek összessége, így különösen gyűjtése, felvétele, rögzítése, rendszerezése,
+                          tárolása, megváltoztatása, felhasználása, lekérdezése, továbbítása, nyilvánosságra hozatala,
+                          összehangolása vagy összekapcsolása, zárolása, törlése és megsemmisítése, valamint az adat
+                          további felhasználásának megakadályozása, fénykép-, hang- vagy képfelvétel készítése,
+                          valamint a személy azonosítására alkalmas fizikai jellemzők rögzítése.
+                        </li>
+                        <li class="mbhalf"><b>Adatvédelmi incidens:</b> az adatbiztonság olyan sérelme, amely a
+                          továbbított, tárolt
+                          vagy más módon kezelt személyes adatok véletlen vagy jogellenes megsemmisülését, elvesztését,
+                          módosulását, jogosulatlan továbbítását vagy nyilvánosságra hozatalát, vagy az azokhoz való
+                          jogosulatlan hozzáférést eredményezi.
+                        </li>
+                        <li class="mbhalf"><b>EGT-állam:</b> az Európai Unió tagállama és az Európai Gazdasági
+                          Térségről szóló
+                          megállapodásban részes más állam, továbbá az az állam, amelynek állampolgára az Európai Unió
+                          és tagállamai, valamint az Európai Gazdasági Térségről szóló megállapodásban nem részes állam
+                          között létrejött nemzetközi szerződés alapján az Európai Gazdasági Térségről szóló
+                          megállapodásban részes állam állampolgárával azonos jogállást élvez.
+                        </li>
+                        <li class="mbhalf"><b>Érintett:</b> bármely információ alapján azonosított vagy azonosítható
+                          természetes
+                          személy.
+                        </li>
+                        <li class="mbhalf"><b>Felügyeleti hatóság:</b> a Nemzeti Adatvédelmi és Információszabadság
+                          Hatóság (cím: 1125
+                          Budapest, Szilágyi Erzsébet fasor 22/C.; telefon: +36-1-391-1400; e-mail:
+                          ugyfelszolgalat@naih.hu; honlap: www.naih.hu)
+                        </li>
+                        <li class="mbhalf"><b>Harmadik ország:</b> minden olyan állam, amely nem EGT-állam.
+                        </li>
+                        <li class="mbhalf"><b>Harmadik személy:</b> olyan természetes vagy jogi személy, illetve jogi
+                          személyiséggel
+                          nem rendelkező szervezet, aki vagy amely nem azonos az érintettel, az adatkezelővel, az
+                          adatfeldolgozóval vagy azokkal a személyekkel, akik az adatkezelő vagy adatfeldolgozó
+                          közvetlen irányítása alatt a személyes adatok kezelésére irányuló műveleteket végeznek.
+                        </li>
+                        <li class="mbhalf"><b>Közvetett adattovábbítás:</b> személyes adatnak valamely harmadik
+                          országban vagy
+                          nemzetközi szervezet keretében adatkezelést folytató adatkezelő vagy adatfeldolgozó részére
+                          továbbítása útján valamely más harmadik országban vagy nemzetközi szervezet keretében
+                          adatkezelést folytató adatkezelő vagy adatfeldolgozó részére történő továbbítása.
+                        </li>
+                        <li><b>Személyes adat:</b> az érintettre vonatkozó bármely információ.
+                        </li>
+                      </ul>
+
+                      <h3>Az Adatkezelő adatai</h3>
+                      <p>Az itt megadott e-mail címen keresztül léphet kapcsolatba velem.</p>
+                      <ul class="no-bullets">
+                        <li><b>Név:</b> Gulácsi András</li>
+                        <li><b>E-mail:</b> gulandras90 (kukac) gmail.com</li>
+                      </ul>
+
+                      <h3>A kezelt személyes adatok köre</h3>
+
+                      <p>Az adatkezelő minden tőle telhető óvintézkedést megtesz és felelősséget vállal a kezelt
+                        személyes adatok biztonságáért, hogy azok ne kerüljenek harmadik személy kezébe.</p>
+                      <p>Ha ennek ellenére adatvédelmi incidens következik be, akkor az adatkezelő haladéktalanul (72
+                        órán belül) tájékoztatja a felügyeleti hatóságot, megkísérli elhárítani a problémát és az
+                        érintetteket is tájékoztatja az eseményről.</p>
+
+                      <h4>A kapcsolati űrlapon keresztül opcionálisan elküldött adatok</h4>
+                      <ul>
+                        <li>az Ön neve</li>
+                        <li>az Ön e-mail címe</li>
+                        <li>az üzenet szövege (benne esetleges személyes adatokkal, melyeket Ön önszántából ad meg)</li>
+                      </ul>
+                      <p>Az üzenet elküldésével rögzítésre kerül az Ön számítógépének az IP-címe, a böngészőazonosító
+                        karakterlánc, a kéretlen üzenetek kiszűrése céljából, és az üzenet elküldésének időpontja is.</p>
+                      <p>A kapcsolati űrlapon beérkező adatok 6 hónap után törlésre kerülnek.</p>
+
+                      <h3>Cookie-k (sütik)</h3>
+                      <p>A HTTP-sütik (általában egyszerűen süti, illetve angolul cookie) kisméretű fájlok, amelyek az
+                        Ön által használt számítógépre vagy egyéb eszközre töltődnek le egy webszerverről. A sütik
+                        információkat gyűjtenek a látogatókról és eszközeikről; megjegyzik a látogatók egyéni
+                        beállításait, amelyek felhasználásra kerül(het)nek.</p>
+
+                      <p>A cookie beállításokat a honlap alján felugró sávban találja meg, ahol a saját belátása
+                        szerint engedélyezheti azokat. A GDPR rendelkezéseinek értelmében, alapértelmezetten az összes
+                        cookie ki van kapcsolva. Utána Ön eldöntheti, hogy elfogadja vagy elutasítja a jelen
+                        adatvédelmi tájékoztatót. Más teendője nincsen ezzel kapcsolatban.</p>
+
+                      <h4>Saját sütik</h4>
+                      <p>A honlap nem használ saját sütiket.</p>
+
+                      <h4>Harmadik féltől származó sütik</h4>
+
+                      <h5>Google Analytics</h5>
+                      <p>A Google Analytics statisztikai célú szolgáltatás használatával az xy.hu információkat gyűjt
+                        azzal kapcsolatban, hogy a látogatók hogyan használják a weboldalt. Az adatot a honlap
+                        fejlesztésének és a felhasználói élmény javításának céljával használja fel. Ezen sütik szintén
+                        lejáratukig a látogató számítógépén vagy böngészésre használt más eszközén, annak böngészőjében
+                        maradnak, illetve amíg a látogató nem törli őket.</p>
+                      <p>A sütikben rögzített, weboldal látogatottságára vonatkozó adatok (a látogatás időpontjával és
+                        az Ön IP címével együtt) a Google szervereire kerülnek átvitelre és letárolásra. A Google arra
+                        használja ezeket az adatokat, hogy az Ön honlap-látogatási szokásait kiértékelje, jelentéseket
+                        állítson össze ezekről az adatkezelő számára. Ezek a sütik nem tudják Önt személy szerint
+                        beazonosítani.</p>
+
+                      <h3>Az Adatfeldolgozók adatai</h3>
+                      <p>Az adatkezelő tevékenysége keretében az alábbi adatfeldolgozókat veszi igénybe:</p>
+                      <h4>Tárhelyszolgáltató és felhő alapú szolgáltatásplatform</h4>
+
+                      <ul class="no-bullets mr0">
+                        <li><b>Netlify, Inc.</b></li>
+                        <li>Cím: 2325 3rd Street, Suite 215, San Francisco, California 94107</li>
+                        <li>E-mail: support@netlify.com</li>
+                        <li>Weboldal: https://www.netlify.com/</li>
+                        <li>Adatkezelési tájékoztató: https://www.netlify.com/privacy/</li>
+                        <li>GDPR: https://www.netlify.com/gdpr/</li>
+                        <li>Biztonság: https://www.netlify.com/security/</li>
+                      </ul>
+
+                      <h4>Google Analytics - analitika</h4>
+                      <ul class="no-bullets mr0">
+                        <li>Google Inc., Mountain View, California, USA</li>
+                        <li>Adatvédelmi irányelvek: https://policies.google.com/privacy?hl=hu</li>
+                      </ul>
+
+                      <h3>Adattovábbítás harmadik országba</h3>
+                      <p>Adattovábbítás az Amerikai Egyesült Államokba történik, mellyel <a href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/eu-us-privacy-shield_en">megfelelőségi
+                          határozat született 2016. július 12-én.</a></p>
+                      <p>A megfelelőségi határozat a <a href="https://policies.google.com/privacy/frameworks">Google
+                          esetében is érvényes.</a></p>
+                      <p>A Google Adatvédelmi Irányelvei 2019. január 22-én megváltoztak, hogy a cég könnyebben
+                        megfeleljen a GDPR rendelkezéseinek, az EGT-államok esetén:</p>
+                      <blockquote>“Az Európai Gazdasági Térségben vagy Svájcban tartózkodó felhasználók esetében a
+                        személyes adataiért felelős adatkezelő a Google Ireland Limited, kivéve, ha valamely
+                        szolgáltatásra vonatkozó külön adatvédelmi tájékoztató erről másként rendelkezik. Tehát a
+                        Google vállalatok közül a Google Ireland Limited felelős a személyes adatainak kezeléséért,
+                        valamint a vonatkozó adatvédelmi jogszabályok betartásáért.”</blockquote>
+
+                      <h3>Az Érintettek jogai</h3>
+                      <p>A GDPR hatálya alá tartozó esetekben az alábbi jogok illetik meg Önt: </p>
+
+                      <ol>
+                        <li>a hozzáféréshez való jog,</li>
+                        <li>a helyesbítéshez való jog,</li>
+                        <li>a törléshez való jog,</li>
+                        <li>az elfeledtetéshez való jog,</li>
+                        <li>az adatkezelés korlátozásához való jog,</li>
+                        <li>az adathordozhatósághoz való jog,</li>
+                        <li>a tiltakozáshoz való jog,</li>
+                        <li>a panaszhoz való jog.</li>
+                      </ol>
+
+                      <ol>
+                        <li class="mbhalf"><b>A hozzáféréshez való jog:</b> Ön jogosult arra, hogy az adatkezelőtől
+                          visszajelzést kapjon arra
+                          vonatkozóan, hogy személyes adatainak kezelése folyamatban van-e, és ha ilyen adatkezelés
+                          folyamatban van, jogosult arra, hogy a személyes adatokhoz és a rendeletben felsorolt
+                          információkhoz hozzáférést kapjon.</li>
+                        <li class="mbhalf"><b>A helyesbítéshez való jog:</b> Ön jogosult arra, hogy kérésére az
+                          adatkezelő indokolatlan
+                          késedelem nélkül helyesbítse a rá vonatkozó pontatlan személyes adatokat. Figyelembe véve az
+                          adatkezelés célját, Ön jogosult arra, hogy kérje a hiányos személyes adatok – egyebek mellett
+                          kiegészítő nyilatkozat útján történő – kiegészítését.</li>
+                        <li class="mbhalf"><b>A törléshez való jog:</b> Ön jogosult arra, hogy kérésére az adatkezelő
+                          indokolatlan késedelem
+                          nélkül törölje a rá vonatkozó személyes adatokat, az adatkezelő pedig köteles arra, hogy Önre
+                          vonatkozó személyes adatokat indokolatlan késedelem nélkül törölje meghatározott feltételek
+                          esetén.</li>
+                        <li class="mbhalf"><b>Az elfeledtetéshez való jog:</b> Ha az adatkezelő nyilvánosságra hozta a
+                          személyes adatot, és
+                          azt törölni köteles, az elérhető technológia és a megvalósítás költségeinek
+                          figyelembevételével megteszi az ésszerűen elvárható lépéseket – ideértve technikai
+                          intézkedéseket – annak érdekében, hogy tájékoztassa az adatokat kezelő adatkezelőket, hogy Ön
+                          kérelmezte a szóban forgó személyes adatokra mutató linkek vagy e személyes adatok
+                          másolatának, illetve másodpéldányának törlését.</li>
+                        <li class="mbhalf"><b>Az adatkezelés korlátozásához való jog:</b> Ön jogosult arra, hogy
+                          kérésére az adatkezelő
+                          korlátozza az adatkezelést, ha az alábbi feltételek valamelyike teljesül: </li>
+                        <li class="mbhalf"><b>Az adatkezelés korlátozásához való jog:</b> Ön jogosult arra, hogy
+                          kérésére az adatkezelő
+                          korlátozza az adatkezelést, ha az alábbi feltételek valamelyike teljesül:
+                          <ol type="a">
+                            <li>Ön vitatja a személyes adatok pontosságát, ez esetben a korlátozás arra az időtartamra
+                              vonatkozik, amely lehetővé teszi, hogy az adatkezelő ellenőrizze a személyes adatok
+                              pontosságát;</li>
+                            <li>az adatkezelés jogellenes, és Ön ellenzi az adatok törlését, és ehelyett kéri azok
+                              felhasználásának korlátozását;</li>
+                            <li>az adatkezelőnek már nincs szüksége a személyes adatokra adatkezelés céljából, de Ön
+                              igényli azokat jogi igények előterjesztéséhez, érvényesítéséhez vagy védelméhez;</li>
+                            <li>Ön tiltakozott az adatkezelés ellen; ez esetben a korlátozás arra az időtartamra
+                              vonatkozik, amíg megállapításra nem kerül, hogy az adatkezelő jogos indokai elsőbbséget
+                              élveznek-e Ön jogos indokaival szemben.</li>
+                          </ol>
+                        </li>
+                        <li class="mbhalf"><b>Az adathordozhatósághoz való jog:</b> Ön jogosult arra, hogy a rá
+                          vonatkozó, általa egy
+                          adatkezelő rendelkezésére bocsátott személyes adatokat tagolt, széles körben használt, géppel
+                          olvasható formátumban megkapja, továbbá jogosult arra, hogy ezeket az adatokat egy másik
+                          adatkezelőnek továbbítsa anélkül, hogy ezt akadályozná az az adatkezelő, amelynek a személyes
+                          adatokat a rendelkezésére bocsátotta (…)</li>
+                        <li class="mbhalf"><b>A tiltakozáshoz való jog:</b> Ön jogosult arra, hogy a saját helyzetével
+                          kapcsolatos okokból
+                          bármikor tiltakozzon személyes adatainak a (…) kezelése ellen, ideértve az említett
+                          rendelkezéseken alapuló profilalkotást is.</li>
+                        <li class="mbhalf"><b>Panaszhoz való jog:</b> Az érintett az adatkezeléssel kapcsolatos
+                          panaszával közvetlenül a
+                          Nemzeti Adatvédelmi és Információszabadság Hatósághoz (cím: 1125 Budapest, Szilágyi Erzsébet
+                          fasor 22/C.; telefon: +36-1-391-1400; e-mail: ugyfelszolgalat@naih.hu; honlap: www.naih.hu)
+                          fordulhat. Az érintett jogainak megsértése esetén bírósághoz fordulhat. A per elbírálása a
+                          törvényszék hatáskörébe tartozik. A per – az érintett választása szerint – az érintett
+                          lakóhelye vagy tartózkodási helye szerinti törvényszék előtt is megindítható. Az adatkezelő
+                          kérésre az érintettet tájékoztatja a jogorvoslat lehetőségéről és eszközeiről.</li>
+                      </ol>
+
+                      <h3>Egyéb rendelkezések</h3>
+                      <p>A jelen adatkezelési tájékoztatót az adatkezelő bármikor saját belátása szerint módosíthatja,
+                        illetve kiegészítheti. Az adatkezelési tájékoztató módosításával egyidejűleg az oldal tetején
+                        látható “Utolsó módosítás” időpontja is frissítésre kerül. A módosított adatkezelési
+                        tájékoztató ettől az időponttól lesz érvényes Önre és az Ön adataira nézve.</p>
+                    </div>
+                    <div class="modal-footer p1">
+                      <button type="button" class="btn btn-lg small-size uppercase bold-700 bg-light-green expanded"
+                        data-dismiss="modal">Bezárás</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

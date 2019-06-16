@@ -6,8 +6,8 @@ backend:
 publish_mode: editorial_workflow
 
 # These lines should *not* be indented
-media_folder: "src/assets/images/" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/assets/images/" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "src/assets/images/articles/" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/assets/images/articles/" # The src attribute for uploaded media will begin with /images/uploads
 
 slug:
   encoding: "ascii"
@@ -20,8 +20,9 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Cikkcím", name: "title", widget: "string"}
+      - {label: "Cím", name: "title", widget: "string"}
       - {label: "Publikálás dátuma", name: "date", widget: "string"}
       - {label: "Kivonat", name: "excerpt", widget: "string"}
       - {label: "Témakör", name: "topic", widget: "string"}
+      - {label: "Borítókép (kiterjesztéssel)", name: "coverImage", widget: "string"}
       - {label: "A cikk szövege", name: "body", widget: "markdown"}

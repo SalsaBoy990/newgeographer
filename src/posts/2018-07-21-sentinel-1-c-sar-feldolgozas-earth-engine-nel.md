@@ -5,6 +5,7 @@ excerpt: >-
   A Sentinel-1 C-sávú szintetikus apertúrájú radaradatokat a Duna-Tisza közi
   vizes élőhelyek és szikes tavak vízellátottságának a vizsgálatára használom.
 topic: radar
+coverImage: modis.jpg
 ---
 A Sentinel-1 C-sávú szintetikus apertúrájú radaradatokat a Duna-Tisza közi vizes élőhelyek és szikes tavak vízellátottságának a vizsgálatára használom. A fő kérdés, hogy milyen állapotban vannak ezek a XIX. századi folyószabályozás és lecsapolások után visszamaradt vizes élőhelyek? Hol válik szárazabb, illetve hol nedvesedik a terület? Ennek megfelelően lehetne kialakítani a vízügyi tervezést, hogy a számunkra, illetve az ökoszisztémák számára kedvező viszonyokat tartsunk fenn vagy alakítsunk ki.
 

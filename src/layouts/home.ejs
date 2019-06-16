@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="hu">
-<%- include partials/head %>
-<body class="bg-gray">
+  <%- include partials/head %>
+<body>
   <%- include partials/header %>
   <main> 
+    <%- include partials/intro %>
+    <%- include partials/earth-engine-app %>
+    <%- include partials/app-description %>
+    <%- include partials/blog %>
     <%- body %>
   </main>
+  <%- include partials/about %>
   <%- include partials/footer %>
-  <%- include partials/bootstrap %>
-  <script src="/assets/scripts/visuals.js"></script>
-  <script src="/assets/scripts/identity.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106020833-1"></script>
-  <script src="/assets/scripts/tracker.js"></script>
+  <%- include partials/scripts %>
+  <%- include partials/tracking %>
+  
+  <script src="/assets/js/visuals.js"></script>
+  <script src="/assets/js/identity.js"></script>
 </body>
 </html>

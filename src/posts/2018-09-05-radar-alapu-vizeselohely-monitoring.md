@@ -6,6 +6,7 @@ excerpt: >-
   vízborítás változásait 2014. szept. és 2018 aug. között. A Hidrológiai
   Közlönybe szánt kézirat.
 topic: 'Google Earth Engine, wetlands, radar, Sentinel-1'
+coverImage: aszaly.jpg
 ---
 *(A cikk teljes címe: "Vizes élőhelyek Sentinel-1 radar alapú monitoringja a Duna-Tisza-közén"; szerzők: Gulácsi András és Dr. Kovács Ferenc)*
 
