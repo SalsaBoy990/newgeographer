@@ -1,7 +1,7 @@
 <div class="bg-green">
   <div class="container-fluid p0 m0">
     <div class="row mx-responsive pt2">
-      <div class="col-xs-12 col-lg-3 clearfix p0">
+      <div class="col-xs-12 col-lg-4 clearfix p0">
         <a id="about"></a>
         <img class="float-left mr1 mt0 grayscale-100 profile unselectable" src="/assets/images/main/author_small.jpg"
           alt="Profilkép" />
@@ -14,16 +14,34 @@
           <li>webfejlesztő</li>
         </ul>
 
-        <ul class="no-bullets small-size m-mt2 light-gray" style="margin-top: 3.8rem;">
+        <ul class="no-bullets small-size mt1 m-mt2 mb2 light-gray">
           <li class="mbhalf">
-            <i data-feather="mail" class="mrquarter"></i>
-            <%= site.email %>
+            <a href="mailto:<%= site.email %>" class="white-link">
+              <svg class="mrquarter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"
+                  fill="#EAEAEA" /></svg>
+              <%= site.email %>
+            </a>
           </li>
           <li class="mbhalf"><a href="https://github.com/<%= site.github %>" target="_blank" class="white-link">
-              <i data-feather="github" style="margin-right: .55rem;"></i><%= site.github %></a>
+              <svg style="margin-right: .55rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z"
+                  fill="#EAEAEA" /></svg><%= site.github %></a>
           </li>
           <li><a href="https://linkedin.com/<%= site.linkedin %>" target="_blank" class="white-link">
-              <i data-feather="linkedin" style="margin-right: .55rem;"></i>Linkedin</a></li>
+              <svg style="margin-right: .55rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm2.5 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-1 1h2v7.5h-2V10zm5.5.43c.584-.565 1.266-.93 2-.93 2.071 0 3.5 1.679 3.5 3.75v4.25h-2v-4.25a1.75 1.75 0 0 0-3.5 0v4.25h-2V10h2v.43z"
+                  fill="#EAEAEA" /></svg>Linkedin
+            </a>
+          </li>
         </ul>
 
       </div>
@@ -32,19 +50,22 @@
         <p class="small-size mb2 light-gray">Klímaváltozás szempontú környezeti monitoring a Google Earth Engine
           számítási platformon (KÉSZÜLETBEN)</p>
         <h5 class="mt0 white">A publikációs listám</h5>
-        <a href="https://m2.mtmt.hu/gui2/?type=authors&mode=browse&sel=10059234" target="_blank" class="white-link small-size">Elérhető
+        <a href="https://m2.mtmt.hu/gui2/?type=authors&mode=browse&sel=10059234" target="_blank"
+          class="white-link small-size">Elérhető
           a Magyar Tudományos Művek Tárában</a>
       </div>
-      <div class="col-xs-12 offset-lg-1 col-lg-3 pl0 pr0 mb2">
-        <p class="min-size light-gray mt0">A honlap tartalma a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-            class="white-link">Creative Commons Nevezd meg! - Ne add el! - Így add tovább! 4.0 Nemzetközi Liszensz</a>
+      <div class="col-xs-12 offset-lg-1 col-lg-2 pl0 pr0 mb2">
+        <p class="light-gray mt0" style="font-size: 10px">A honlap tartalma a <a rel="license"
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="white-link">Creative Commons Nevezd meg! -
+            Ne add el! - Így add tovább! 4.0 Nemzetközi Liszensz</a>
           feltételeinek megfelelően használható fel. Kivételt képez ez alól a doktori dolgozatom és a fotó rólam.
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="mthalf mb0 unselectable license"
-              alt="Creative Commons Licenc" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+              class="mthalf mb0 unselectable license" alt="Creative Commons Licenc"
+              src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
         </p>
         <!--<a href="#" class="white-link small-size" style="line-height: 1.1 !important">Adatkezelési tájékoztató (GDPR)</a>
         -->
-        <button type="button" class="small-size light-gray bg-green underline border-none no-shadow p0 mthalf"
+        <button type="button" class="min-size light-gray bg-green underline border-none no-shadow p0 mthalf"
           data-toggle="modal" data-target="#modalAdatvedelem2">Adatkezelési
           tájékoztató</button>
       </div>
@@ -54,7 +75,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header p1">
-              <h2 class="modal-title mt0" id="exampleModal">Adatkezelési tájékoztató<br><span class="small-size normal italic medium-gray mb2">Utolsó
+              <h2 class="modal-title mt0" id="exampleModal">Adatkezelési tájékoztató<br><span
+                  class="small-size normal italic medium-gray mb2">Utolsó
                   módosítás: 2019. június 15.</span></h2>
               <button type="button" class="close" data-dismiss="modal" aria-label="Bezárás">
                 <span aria-hidden="true">&times;</span>
@@ -64,7 +86,8 @@
               <p>A honlap adatkezelési tájékoztatójának kialakításakor a következő jogforrásokat vettük
                 figyelembe:</p>
               <ul>
-                <li class="mbhalf"><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1532348683434&uri=CELEX:02016R0679-20160504">az
+                <li class="mbhalf"><a
+                    href="https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1532348683434&uri=CELEX:02016R0679-20160504">az
                     Európai Parlament és a Tanács 2016/679 rendelete</a> (2016. április 27.) a természetes
                   személyeknek a személyes adatok kezelése tekintetében történő védelméről és az ilyen adatok
                   szabad áramlásáról, valamint a 95/46/EK rendelet hatályon kívül helyezéséről („GDPR”:
@@ -216,7 +239,8 @@
               </ul>
 
               <h3>Adattovábbítás harmadik országba</h3>
-              <p>Adattovábbítás az Amerikai Egyesült Államokba történik, mellyel <a href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/eu-us-privacy-shield_en">megfelelőségi
+              <p>Adattovábbítás az Amerikai Egyesült Államokba történik, mellyel <a
+                  href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/eu-us-privacy-shield_en">megfelelőségi
                   határozat született 2016. július 12-én.</a></p>
               <p>A megfelelőségi határozat a <a href="https://policies.google.com/privacy/frameworks">Google
                   esetében is érvényes.</a></p>

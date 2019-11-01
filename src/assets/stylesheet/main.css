@@ -71,7 +71,7 @@
 body,
 html {
   color: #323A38;
-  background: #FFFFFF;
+  /* background: $white;*/
   font-size: 18px;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   line-height: 1.5;
@@ -701,11 +701,12 @@ tr:nth-child(even) {
 .border-radius-6 {
   border-radius: 6px; }
 
+/*
 hr {
-  border: 1px solid #D9DDE3;
+  border: 1px solid $light-gray2;
   margin: 0;
-  margin-bottom: 0rem; }
-
+  margin-bottom: 0rem;
+}*/
 .lined:after {
   display: block;
   content: "";
@@ -1077,19 +1078,7 @@ label {
     margin-left: 0 !important;
     margin-right: 0 !important; }
   .ws-errorbox p {
-    font-size: 15px !important; } }
-
-@media (max-width: 576px) {
-  .mx-responsive {
-    margin-left: 17px !important;
-    margin-right: 17px !important; }
-  .m-mx-responsive {
-    margin-left: 0px !important;
-    margin-right: 0px !important; }
-  .medium-img {
-    width: 100% !important; }
-  .mobile-hide-nav {
-    display: none; }
+    font-size: 15px !important; }
   .m-mt2 {
     margin-top: 2rem; }
   .m-mt1 {
@@ -1111,7 +1100,19 @@ label {
   .m-mt-0 {
     margin-top: 0 !important; }
   .m-mbhalf {
-    margin-bottom: 1rem !important; }
+    margin-bottom: 1rem !important; } }
+
+@media (max-width: 576px) {
+  .mx-responsive {
+    margin-left: 17px !important;
+    margin-right: 17px !important; }
+  .m-mx-responsive {
+    margin-left: 0px !important;
+    margin-right: 0px !important; }
+  .medium-img {
+    width: 100% !important; }
+  .mobile-hide-nav {
+    display: none; }
   h1 {
     font-size: 30px; }
   h2 {
@@ -1192,3 +1193,21 @@ label {
 
 .app-height {
   min-height: 800px; }
+
+.bg-header {
+  background: url(../images/newgeo_intro.png);
+  background-size: auto, cover; }
+
+.title {
+  font-size: 52px; }
+
+.matrice {
+  color: #5e4708;
+  background: #EFEFEF;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0px 2px 0px 2px; }
+
+.card {
+  position: relative; }

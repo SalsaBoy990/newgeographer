@@ -141,7 +141,7 @@ $medium-blue:  #117bb8;
 body,
 html {
     color: $black;
-    background: $white;
+   /* background: $white;*/
     font-size: $base-size;
     font-family: $body-font;
     line-height: $lheight;
@@ -947,12 +947,12 @@ tr:nth-child(even) {
 
 
 
-
+/*
 hr {
   border: 1px solid $light-gray2;
   margin: 0;
   margin-bottom: 0rem;
-}
+}*/
 
 
 .lined:after {
@@ -1388,10 +1388,8 @@ border-radius: 2px;
         margin-left: margin-size(2) !important;
         margin-right: margin-size(2) !important;
     }
-}
 
-@media (max-width: 992px) {
-
+    
 }
 
 @media (max-width: 768px) {
@@ -1416,28 +1414,6 @@ border-radius: 2px;
 
     .ws-errorbox p {
       font-size: 15px !important;
-    }
-
-}
-
-
-@media (max-width: 576px) {
-    .mx-responsive {
-        margin-left: 17px !important;
-        margin-right: 17px !important;
-    }
-
-    .m-mx-responsive {
-      margin-left: 0px !important;
-      margin-right: 0px !important;
-  }
-
-    .medium-img {
-      width: 100% !important;
-    }
-
-    .mobile-hide-nav {
-      display: none;
     }
 
     .m-mt2 {
@@ -1481,6 +1457,30 @@ border-radius: 2px;
     .m-mbhalf {
       margin-bottom: 1rem !important
     }
+
+}
+
+
+@media (max-width: 576px) {
+    .mx-responsive {
+        margin-left: 17px !important;
+        margin-right: 17px !important;
+    }
+
+    .m-mx-responsive {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+  }
+
+    .medium-img {
+      width: 100% !important;
+    }
+
+    .mobile-hide-nav {
+      display: none;
+    }
+
+
 
     h1 {
       font-size: 30px
@@ -1600,3 +1600,24 @@ border-radius: 2px;
   min-height: 800px;
 }
 
+.bg-header {
+  background: url(../images/newgeo_intro.png);
+  background-size: auto, cover;
+}
+
+.title {
+  font-size: 52px;
+}
+
+.matrice {
+  color: #5e4708;
+  background: $light-gray3;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0px 2px 0px 2px;
+}
+
+.card {
+  position: relative;
+}
