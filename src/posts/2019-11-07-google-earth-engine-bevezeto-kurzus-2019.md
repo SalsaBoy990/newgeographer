@@ -46,6 +46,8 @@ A Google Earth Engine használatba vételéhez viszont tudni kellene programozni
 - A kivágatot le szeretnénk menteni a Google Drive-ra
 - Szeretnénk NDVI vegetációs indexet számítani a kivágatunkra, amit szintén a Drive-ra szeretnénk menteni.
 
+Ha esetleg nem töltene be a PDF nézet, akkor [ezen a linken letöltheted](assets/files/google_earth_engine_gulacsi_andras_2019_1ora.pdf).
+
 <embed src="assets/files/google_earth_engine_gulacsi_andras_2019_1ora.pdf" type="application/pdf" width="100%" height="600px" />
 
 Beillesztettem ide az órán készített kódrészletet, amit bemásolhatsz a saját kódszerkesztődbe és futtathatod. A kódrészlet hiányos, a végét neked kell befejezned.
