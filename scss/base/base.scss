@@ -796,8 +796,7 @@ figcaption {
   font-size: $small-size;
   font-style: normal;
   color: $medium-gray;
-  margin-left: 0rem;
-  margin-right: 1rem;
+  text-align: center;
 }
 
 .normal-font {
@@ -1626,4 +1625,29 @@ border-radius: 2px;
 
 header nav {
   padding-top: 1px;
+}
+
+embed, figure, .embed-responsive, .code-toolbar {
+  margin-top: margin-size(1.5);
+  margin-bottom: margin-size(1.5);
+}
+
+.code-toolbar {
+  position: relative;
+}
+
+.toolbar .toolbar-item button {
+  font-size: $small-size;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow:   none;
+  box-shadow: none;
+  border: 1px solid #999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $gray-green;
+  background: $light-gray;
 }

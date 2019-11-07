@@ -6,7 +6,7 @@ excerpt: >-
   információt akarunk nyerni. A GIS-tudományban a térbeli adatok feldolgozása a
   célunk. Ebben segít a felhő alapú számítástechnika.
 topic: 'Big data, GeoJSON, Google Earth Engine'
-coverImage: google_servers.jpg
+coverImage: /assets/images/articles/google_servers.jpg
 ---
 ## Mi az a Big Data?
 
