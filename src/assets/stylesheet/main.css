@@ -730,12 +730,12 @@ a:focus, a:hover {
 
 .white-link {
   color: #EAEAEA !important;
-  text-decoration: underline; }
+  text-decoration: none; }
 
 .white-link:hover, .white-link:active, .white-link:focus {
   transition: ease-in 0.3s;
   color: #FFFFFF;
-  text-decoration: none; }
+  text-decoration: underline; }
 
 .linkedin-link:hover {
   color: #fff !important;
@@ -1113,6 +1113,8 @@ label {
     width: 100% !important; }
   .mobile-hide-nav {
     display: none; }
+  .title {
+    font-size: 36px !important; }
   h1 {
     font-size: 30px; }
   h2 {
@@ -1211,3 +1213,6 @@ label {
 
 .card {
   position: relative; }
+
+header nav {
+  padding-top: 1px; }

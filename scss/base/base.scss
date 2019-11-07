@@ -981,13 +981,13 @@ a:focus, a:hover {
 
 .white-link {
   color: $light-gray !important;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .white-link:hover, .white-link:active, .white-link:focus {
   transition: ease-in 0.3s;
   color: $white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .linkedin-link:hover {
@@ -1480,7 +1480,9 @@ border-radius: 2px;
       display: none;
     }
 
-
+    .title {
+      font-size: 36px !important;
+    }
 
     h1 {
       font-size: 30px
@@ -1620,4 +1622,8 @@ border-radius: 2px;
 
 .card {
   position: relative;
+}
+
+header nav {
+  padding-top: 1px;
 }
