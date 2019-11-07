@@ -26,5 +26,5 @@ collections:
       - {label: "Publication date", name: "date", widget: "date", format: 'YYYY-MM-DD'}
       - {label: "Short description", name: "excerpt", widget: "text"}
       - {label: "Topic", name: "topic", widget: "select", multiple: true, options: ['Google Earth Engine', 'radar', 'Sentinel-1', 'MODIS'], default: ['Google Earth Engine']}
-      - {label: "Thumbnail image", name: "coverImage", widget: "image",}
+      - {label: "Thumbnail image", name: "coverImage", widget: "image"}
       - {label: "Post body", name: "body", widget: "markdown"}
