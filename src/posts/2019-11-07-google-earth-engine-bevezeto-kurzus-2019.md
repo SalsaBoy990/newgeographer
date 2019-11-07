@@ -37,6 +37,19 @@ A Google Earth Engine használatba vételéhez viszont tudni kellene programozni
 
 ## Az 1. óra anyaga
 
+1. A csatolt prezentációban elsőként röviden írok a felhő alapú számítástechnikáról és Google Earth Engine felhő platformról.
+
+2. Utána a JavaScript nyelvről adok egy részleges áttekintést, különös figyelmet szentelve azon nyelvi elemeknek, amelyek a Google Earth Engine használata során elengedhetetlenek.
+
+3. Végül egy nagyon egyszerű feladaton keresztül elkezdjük beizzítani a motort:
+- Szeretnénk egy általunk választott mintaterületre egy augusztusi és lehetőség szerint minimális felhőborítottságú Landsat 8 műholdképből egy kivágatot készíteni.
+- A kivágatot le szeretnénk menteni a Google Drive-ra
+- Szeretnénk NDVI vegetációs indexet számítani a kivágatunkra, amit szintén a Drive-ra szeretnénk menteni.
+
+<embed src="assets/files/google_earth_engine_gulacsi_andras_2019_1ora.pdf" type="application/pdf" width="100%" height="600px" />
+
+Beillesztettem ide az órán készített kódrészletet, amit bemásolhatsz a saját kódszerkesztődbe és futtathatod. A kódrészlet hiányos, a végét neked kell befejezned.
+
 ````javascript
 // A mintaterületünk, amit a térképnézeten rajzoltunk körbe
 var mintaterulet = ee.Geometry.Polygon(
@@ -127,6 +140,7 @@ Export.image.toDrive({
 
 
 ## A 2. óra anyaga
+*Feltöltés alatt*
 
 ## A 3. óra anyaga
-
+*Feltöltés alatt*
