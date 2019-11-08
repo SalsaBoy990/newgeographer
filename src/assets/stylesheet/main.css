@@ -729,9 +729,18 @@ a:focus, a:hover {
 
 .white-link {
   color: #EAEAEA !important;
-  text-decoration: none; }
+  text-decoration: underline; }
 
 .white-link:hover, .white-link:active, .white-link:focus {
+  transition: ease-in 0.3s;
+  color: #FFFFFF;
+  text-decoration: none; }
+
+.white-link-header {
+  color: #EAEAEA !important;
+  text-decoration: none; }
+
+.white-link-header:hover, .white-link-header:active, .white-link-header:focus {
   transition: ease-in 0.3s;
   color: #FFFFFF;
   text-decoration: underline; }

@@ -980,10 +980,21 @@ a:focus, a:hover {
 
 .white-link {
   color: $light-gray !important;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .white-link:hover, .white-link:active, .white-link:focus {
+  transition: ease-in 0.3s;
+  color: $white;
+  text-decoration: none;
+}
+
+.white-link-header {
+  color: $light-gray !important;
+  text-decoration: none;
+}
+
+.white-link-header:hover, .white-link-header:active, .white-link-header:focus {
   transition: ease-in 0.3s;
   color: $white;
   text-decoration: underline;
