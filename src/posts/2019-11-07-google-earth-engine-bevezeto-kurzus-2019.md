@@ -62,7 +62,7 @@ A Google Earth Engine használatba vételéhez viszont tudni kellene programozni
 
 Ha esetleg nem töltene be a PDF nézet, akkor [ezen a linken letöltheted](/assets/files/google_earth_engine_gulacsi_andras_2019_1ora.pdf). Ha esetleg kell: [Adobe Acrobat Reader letöltése](https://get.adobe.com/hu/reader/).
 
-<embed src="assets/files/google_earth_engine_gulacsi_andras_2019_1ora.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="assets/files/google-earth-engine-gulacsi-andras-2019-1ora.pdf" type="application/pdf" width="100%" height="600px" />
 
 Beillesztettem ide az órán készített kódrészletet, amit bemásolhatsz a saját kódszerkesztődbe és futtathatod. A kódrészlet hiányos, a végét neked kell befejezned:
 
@@ -167,20 +167,7 @@ Export.image.toDrive({
 A feladat megoldásához töltsd le a miklapuszta shapefájlt: [miklapuszta.zip](/assets/files/miklapuszta.zip).
 
 
-## A 2. óra anyaga
 
-A 2. óra prezentációjában egy kis betekintést nyújtok a Google Earth Engine működéséről, az alábbi pontokra kitérve:
-
-1. Kliens kontra szerver
-2. Kommunikáció a szerverrel JSON formátumban
-3. Késleltetett végrehajtás
-4. A lépték és a vetületek kezelése
-5. Adatok importálása és exportálása
-6. Earth Engine Apps, az eredmények publikálása
-
-Ha esetleg nem töltene be a PDF nézet, akkor [ezen a linken letöltheted](/assets/files/google_earth_engine_gulacsi_andras_2019_2ora.pdf).
-
-<embed src="assets/files/google_earth_engine_gulacsi_andras_2019_2ora.pdf" type="application/pdf" width="100%" height="600px" />
 
 Az órán felmerült a mozaikolás szükségessége, ugyanis ha olyan a mintaterületünk, hogy egy műholdképpel nem tudjuk lefedni, akkor össze kell tudnunk illeszteni több képet egymáshoz. Lásd a kódrészletet:
 
@@ -258,7 +245,10 @@ var ndviVisuals = {
 Map.addLayer(result, ndviVisuals, 'Landsat 8 NDVI');
 ````
 
+A mozaikolás helyett használhatjuk a kompozitkészítés funkciót is. A Google Earth Engine-ben nem sok különbség van a két opció között. A kompozitkészítéssel is összeolvaszthatjuk a képeket. Az átfedő részekre pedig számolhatjuk a pixelek átlagát:
+
+````javascript
+var landsatComposite = landsat.mean().clip(mintaterulet);
+````
 
 
-## A 3. óra anyaga
-*Még nem tartottam meg ezt az órát. Később kerül feltöltésre.*
