@@ -24,9 +24,9 @@ A prezentációban egy kis betekintést nyújtok a Google Earth Engine működé
 7. Moduláris szerkezet
 8. UI komponensek és események
 
-Ha esetleg nem töltene be a PDF nézet, akkor [ezen a linken letöltheted](/assets/files/google-earth_engine_gulacsi_andras-2019-2-3ora.pdf).
+Ha esetleg nem töltene be a PDF nézet, akkor [ezen a linken letöltheted](/assets/files/google-earth-engine-gulacsi-andras-2019-2-3ora.pdf).
 
-<embed src="assets/files/google-earth_engine_gulacsi_andras-2019-2-3ora.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="assets/files/google-earth-engine-gulacsi-andras-2019-2-3ora.pdf" type="application/pdf" width="100%" height="600px" />
 
 ## Záróprojekt: Amazonas NDVI monitoring
 
