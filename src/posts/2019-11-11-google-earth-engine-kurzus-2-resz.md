@@ -9,6 +9,8 @@ topic:
   - Google Earth Engine
 coverImage: /assets/images/articles/gee_editor.jpg
 ---
+A Szegedi Tudományegyetemen tartott Google Earth Engine kurzusom írott változata. Csatoltam a szükséges kódrészleteket, fájlokat és a prezentációm diáit is.
+
 ## A 2 és 3. órák anyaga
 
 A prezentációban egy kis betekintést nyújtok a Google Earth Engine működésébe, az alábbi pontokra kitérve:
@@ -39,6 +41,21 @@ A [Git verziókövető rendszer](https://git-scm.com/) segítségével is letöl
 ````shell
 git clone https://earthengine.googlesource.com/users/gulandras90/gee_course_2019
 ````
+
+## Irodalom
+
+1. Google Earth Engine Team (2015). [Google Earth Engine: A planetary-scale geospatial analysis platform.](https://earthengine.google.com)
+2. [Google Earth Engine API kézikönyv.](https://developers.google.com/earth-engine/) 
+3. [Google Earth Engine Code Editor.](https://code.earthengine.google.com/)
+4. [Google Earth Engine Explorer.](https://explorer.earthengine.google.com)
+
+### Néhány fontos tudnivaló
+
+A GEE nem kereskedelmi célra ingyenesen elérhető, viszont a használata az **Earth Engine Kiértékelők** (Earth Engine Evaluators) számára korlátozott.
+
+* A Google Earth Engine használatához [Google Fiókkal kell rendelkezni](https://accounts.google.com/SignUp?hl=hu).
+
+* Egy űrlapot kell kitölteni [itt](https://signup.earthengine.google.com/). Kb. 1 hét alatt bírálják el, és adnak hozzáférést a platformhoz.
 
 
 
