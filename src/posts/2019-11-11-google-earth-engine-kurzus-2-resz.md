@@ -42,6 +42,13 @@ A [Git verziókövető rendszer](https://git-scm.com/) segítségével is letöl
 git clone https://earthengine.googlesource.com/users/gulandras90/gee_course_2019
 ````
 
+### Erdőirtások Apuí közelében
+
+![Landsat 8 valós színes kompozit](/assets/images/articles/amazonas-landsat8-kompozit.jpg){.medium-img}
+
+![Landsat 8 standardizált NDVI](/assets/images/articles/amazonas-landsat8-standardized-ndvi.jpg){.medium-img}
+
+
 ## Irodalom
 
 1. Google Earth Engine Team (2015). [Google Earth Engine: A planetary-scale geospatial analysis platform.](https://earthengine.google.com)
