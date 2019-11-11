@@ -38,15 +38,15 @@ A kódokat tartalmazó zip fájl letöltése: [gee-course-2019.zip](/assets/file
 
 A [Git verziókövető rendszer](https://git-scm.com/) segítségével is letöltheted a parancssorban:
 
-````shell
+````git
 git clone https://earthengine.googlesource.com/users/gulandras90/gee_course_2019
 ````
 
 ### Erdőirtások Apuí közelében
 
-![Landsat 8 valós színes kompozit](/assets/images/articles/amazonas-landsat8-kompozit.jpg){.medium-img}
+![Landsat 8 valós színes kompozit](/assets/images/articles/amazonas-landsat8-kompozit.jpg)
 
-![Landsat 8 standardizált NDVI](/assets/images/articles/amazonas-landsat8-standardized-ndvi.jpg){.medium-img}
+![Landsat 8 standardizált NDVI](/assets/images/articles/amazonas-landsat8-standardized-ndvi.jpg)
 
 
 ## Irodalom
