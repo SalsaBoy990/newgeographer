@@ -16,6 +16,7 @@ module.exports = {
     firstName: "András",
     lastName: "Gulácsi",
     url: "https://www.newgeographer.com",
+    siteUrl: "https://www.newgeographer.com",
     image: "/meandering-river.jpg",
     email: "guland@protonmail.com",
     socialMedia: {
@@ -104,6 +105,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -120,5 +122,12 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-106020833-1",
+        anonymize: false,
+      }
+    }
   ],
 }

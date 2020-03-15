@@ -16,7 +16,7 @@ import contactGIF from '../gifs/contact-me.gif'
 
 export default () => (
   <Container>
-    <SEO title={`Kapcsolat`} pathname={`/kapcsolat/`} website={true} description={"Vedd fel velem a kapcsolatot az űrlapon keresztül, e-mail-ben, Linkedin-en."} />
+    <SEO title={`Üzenet elküldve`} pathname={`/uzenet-elkuldve/`} website={true} description={"Sikeresen elküldted az üzenetedet számomra. :)"} />
     <Header>
       <NavLink to="/">Főoldal</NavLink>
       <NavLink to="/rolam/">Rólam </NavLink>

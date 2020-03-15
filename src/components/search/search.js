@@ -10,8 +10,8 @@ import {
 } from "react-instantsearch-dom"
 
 // include the full Algolia theme
-import "instantsearch.css/themes/reset.css"
-import "instantsearch.css/themes/algolia.css"
+import "instantsearch.css/themes/reset-min.css"
+import "../../styles/algolia.css"
 
 import PostPreview from "./post-preview"
 import "./search.module.css"
@@ -52,7 +52,18 @@ const Search = ({ hit }) => (
     css={css`
       li { 
         background-color: #fefefe;
-      }`} 
+      }
+      [class^='ais-'] {
+        font-size: inherit !important;
+      }
+      
+      .ais-InfiniteHits-item,
+      .ais-InfiniteResults-item,
+      .ais-Hits-item,
+      .ais-Results-item {
+        width: calc(100% - 1rem) !important;
+      }`
+    } 
     />
 
     <div className="small-size mt1">

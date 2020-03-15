@@ -103,7 +103,7 @@ const AboutPage = ({ data }) => {
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                <h3 className="h4 mt0" css={css`letter-spacing: 1px; line-height: 130%;`}>{publication.node.title}</h3>
+                <h3 className="h4 mt0" css={css`line-height: 130%;`}>{publication.node.title}</h3>
               </a>
               <p
                 css={css`
