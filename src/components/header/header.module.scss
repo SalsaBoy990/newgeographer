@@ -1,0 +1,18 @@
+@import "../../styles/base.scss";
+
+.bgGreen {
+  background-color: $dark-green;
+}
+
+.poppins {
+  font-family: $body-font;
+}
+
+
+.lightBlueLink {
+  color: $light-blue;
+}
+.lightBlueLink:hover {
+  color: $white !important;
+}
+

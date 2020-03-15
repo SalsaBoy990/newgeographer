@@ -1,0 +1,53 @@
+@import "../../styles/base.scss";
+
+.bgGreen {
+  background-color: $dark-green;
+}
+
+.bgBlack {
+  background-color: $black;
+}
+
+.lightBlueLink {
+    // color: $light-blue;
+    color: $light-green;
+  }
+  .lightBlueLink:hover {
+    color: $white !important;
+  }
+
+// .bottomBar {
+//   // min-height: 54px;
+//   // line-height: 54px;
+// }
+
+.lightGray {
+  color: $light-gray;
+}
+
+.lightGray2 {
+  color: $light-gray;
+}
+
+.minSize {
+  font-size: $min-size;
+}
+
+.smallSize {
+  font-size: $small-size;
+}
+
+.mediumSize {
+  font-size: $medium-size;
+}
+
+.whiteLink {
+  color: $light-gray !important;
+  text-decoration: underline;
+}
+
+.whiteLink:hover, .whiteLink:active, .whiteLink:focus {
+  transition: ease-in 0.3s;
+  color: $white;
+  text-decoration: none;
+}

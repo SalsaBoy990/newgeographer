@@ -1,0 +1,19 @@
+@import "../../styles/base.scss";
+
+.tagContainer {
+  border: 1px solid $gray2;
+  border-radius: 10px;
+  background-color: $white2;
+  padding: margin-size(0.25);
+  margin-right: margin-size(0.25);
+  font-size: $min-size;
+  color: $gray-green;
+}
+
+.tagContainer a {
+  text-decoration: none !important;
+}
+
+.tagContainer a:hover {
+  text-decoration: underline;
+}

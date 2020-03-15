@@ -1,0 +1,19 @@
+# Disallow my-files page
+User-agent: *
+Disallow: /my-files/
+
+# Disallow uzenet-elkuldve page
+User-agent: *
+Disallow: /uzenet-elkuldve/
+
+# Disallow cimke pages
+User-agent: *
+Disallow: /cimke
+
+# Disallow callback page
+User-agent: *
+Disallow: /callback
+
+# Rule 2
+User-agent: *
+Allow: /

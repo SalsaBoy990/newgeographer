@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* Created by András Gulácsi (@andrasgulacsi / salsaboy990) */
+
+@import "base.scss";
+@import "padding-margin.scss";
+@import "media-queries.scss";
+
+
+.initialClose {
+  display: none;
+}
+
+.open {
+  display: block !important;
+}
+
+.close {
+  display: none !important;
+}
+
+/* Some custom global css rules */
+.mx-responsive {
+  margin-right: 45px;
+  margin-left: 45px;
+}
+
+.gray-green {
+  color: $gray-green;
+}
+
+input {
+  height: margin-size(1.5);
+  color: #000;
+}
+
+textarea {
+  min-height: margin-size(10);
+}
+
+.nav-item .nav-link a {
+  font-size: $small-size;
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.7);
+  border-color: rgba(255,255,255,.3);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: ">";
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+.poppins {
+  font-family: $body-font;
+}
+.prompt {
+  font-family: $heading-font;
+}
+
+#fel {
+  margin-top: -10px;
+}
+
+.mb08 {
+  margin-bottom: .5rem;
+}
+
+
+.min-size {
+  font-size: $min-size;
+}
+.small-size {
+  font-size: $small-size;
+}
+
+.medium-size {
+  font-size: $medium-size;
+}
+
+.border-none {
+  border: none
+}
+
+.align-center {
+  text-align: center
+}
+
+.align-left {
+  text-align: left
+}
+
+.align-right {
+  text-align: right
+}
+
+.italic {
+  font-style: italic
+}
+
+.expanded {
+  letter-spacing: 1px
+}
+
+.expanded-2 {
+  letter-spacing: 2px
+}
+
+.expanded-3 {
+  letter-spacing: 3px
+}
+
+.condensed {
+  letter-spacing: -1px
+}
+
+/* FONT STYLES */
+.light {
+  font-weight: 300
+}
+
+.normal-400 {
+  font-weight: 400
+}
+
+.bold-500 {
+  font-weight: 500
+}
+
+.bold-600 {
+  font-weight: 600
+}
+
+.bold-700 {
+  font-weight: 700
+}
+
+.bold-800 {
+  font-weight: 800
+}
+
+.black-900 {
+  font-weight: 900
+}
+
+.uppercase {
+  text-transform: uppercase
+}
+
+.underline {
+  text-decoration: underline
+}
+
+.no-underline {
+  text-decoration: none
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.left {
+  float: left
+}
+
+.right {
+  float: right
+}
+
+.inline {
+  display: inline
+}
+
+.block {
+  display: block
+}
+
+.hidden {
+  display: none
+}
+
+.border-shadow-input {
+  -webkit-box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:   -1px -1px 1px rgba(0, 0, 0, 0.4);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         -1px -1px 1px rgba(0, 0, 0, 0.4);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+}

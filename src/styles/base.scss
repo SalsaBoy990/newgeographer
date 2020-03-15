@@ -1,0 +1,368 @@
+// Size Variables
+$baseline:    1.5rem /* 27px */;
+$base-size:   18px;
+$lheight:     1.6;
+$h1-size:     2.222222rem;
+$h2-size:     1.666667rem;
+$h3-size:     1.333333rem;
+$h4-size:     1rem;
+$medium-size: 0.888888rem;
+$small-size:  0.777777rem;
+$min-size:    0.666666rem;
+
+// Base color Variables
+// $black:        #222;
+$white:        #FFF;
+$gray:         #CCC;
+$gray2:        #AAA;
+$gray3:        #888;
+$gray4:        #555;
+// $blue:         #2A3E94;
+
+// Theme color Variables
+$orange:        #C83904;
+$dark-green:    #0B6052;
+$gray-green:    #515958;
+$light-green:   #77D6A3;
+$light-green2:  #98b9a7;
+$black:         #323a38;
+$black2:        #343434;
+$black3:        #151817;
+$medium-gray:   #687270;
+$light-gray:    #EAEAEA;
+$light-gray2:   #D9DDE3;
+$light-gray3:   #EFEFEF;
+$white2:        #EEEFF2;
+$dark-coral:    #C88E78;
+$light-coral:   #C89F90;
+$yellow:        #FFF2C9;
+$dark-gray:     #433F3E;
+
+// $error:         #E7785F;
+$error:         #bd4429;
+$success:       #77D6A3;
+$info:          #F0DD9C;
+
+$blue:         #117bb8;
+$medium-blue:  #117bb8;
+$light-blue:   #9bd9fd;
+
+// Function to calculate margin sizes (n times the baseline grid size)
+@function margin-size($n) {
+  @return $n * $baseline;
+}
+
+// Function to calculate border-radius (in pixels)
+@function border-radius($num) {
+  @return $num + 'px';
+}
+
+// Fonts
+$heading-font: 'Prompt', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+$body-font:    'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+$code-font:    ''; 
+
+
+body,
+html {
+    color: $black;
+    background: $white2;
+    font-size: $base-size;
+    font-family: $body-font;
+    line-height: $lheight;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: $blue
+}
+
+::selection {
+  color: #fff;
+  background: $blue
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit
+}
+
+html {
+    box-sizing: border-box
+}
+
+/* Clearfix hack to clear the floats */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+body, p, blockquote,
+figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+    margin: 2rem 0;
+    padding: 0;
+}
+
+pre code {
+    font-size: 0.8rem;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    font-weight: 700;
+    margin: 2rem 0 $baseline 0;
+    -webkit-font-smoothing: initial;
+    line-height: 1.1
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    text-decoration: underline;
+    font-weight: 700
+}
+
+h1,
+.h1 {
+    font-size: $h1-size;
+    margin-top: 0
+}
+
+h2,
+.h2 {
+    font-size: $h2-size
+}
+
+h3,
+.h3 {
+    font-size: $h3-size
+}
+
+h4,
+.h4 {
+    font-size: $base-size
+}
+
+h5,
+.h5 {
+    font-size: $medium-size;
+}
+
+h6,
+.h6 {
+    font-size: $small-size
+}
+
+p {
+    /*font-size: 1rem;*/
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ol,
+ul {
+    margin-top: 0;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.no-bullets {
+    list-style-type: none;
+    margin-left: 0rem;
+    padding-left: 0;
+    line-height: 1.54;
+}
+
+blockquote {
+    font-style: italic;
+    font-family: $body-font;
+    padding: 0;
+}
+
+table {
+  font-family: $body-font;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: $medium-size;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%
+  }
+  // table, th, td {
+  //   border: 1px solid $gray3;
+  // }
+  th,
+  td {
+    border-bottom: 1px solid $gray;
+    padding: 0.35rem 0.5rem
+  }
+  tr:nth-child(even) {
+    background: rgba(104, 114, 112, 0.1)
+  }
+
+figcaption {
+  font-family: $heading-font;
+  margin-bottom: margin-size(2);
+  font-size: $small-size;
+  font-style: italic;
+  margin-left: 0;
+  text-align: center;
+}
+
+figure img {
+  margin-top: margin-size(2);
+}
+
+caption {
+  font-family: $heading-font;
+  margin: 0;
+  font-size:  $small-size;
+  font-style: italic;
+  color: $gray4;
+  text-align: center;
+}
+
+img {
+  margin: 0;
+  // margin-top: 1.5rem;
+  // margin-bottom: .5rem;
+  // margin-left: 0rem;
+  // margin-right: 0rem;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+hr {
+  border: 1px solid $gray;
+  margin: 0;
+  margin-top: margin-size(0);
+  margin-bottom: 0.5rem;
+}
+
+.nav-item .nav-link a {
+  font-size: $medium-size !important;
+}
+
+.navbar-nav a {
+  font-size: $medium-size !important;
+}
+
+a {
+  // font-size: $base-size;
+  text-decoration: underline;
+  color: $blue;
+  transition: color 0.3s ease-in
+  }
+  a:focus, a:hover {
+    color: #0f1b5c;
+    text-decoration: none;
+  }
+  /*
+  a:visited {
+    color: rgb(80, 5, 99);
+  }*/
+
+.no-visited:visited {
+  color: #fff
+}
+
+input {
+  border-radius: 5px;
+  min-width: 100%;
+  background-color: #fff;
+  font-family: $body-font;
+  font-size: 1rem;
+  color: $black;
+}
+
+input[type=text]:focus, input[type="email"]:focus, textarea:focus {
+  background-color: #eaeec5
+}
+
+textarea {
+  font-family: $body-font;
+  font-size: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  border-top-color: #999;
+  border-left-color: #999;
+  border-right-color: #ddd;
+  border-bottom-color: #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: $black;
+  min-width: 100%;
+  min-height: 250px;
+}
+
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: $dark-green;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: $medium-size;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.btn:hover {
+  background-color: $dark-green;
+  color: $white;
+}
+
+.btn-green {
+  color: $black3 !important;
+  background-color: #77D6A3;
+}
+
+.btn-green:hover {
+  color: $black3;
+  background-color: $light-gray2 !important;
+}
