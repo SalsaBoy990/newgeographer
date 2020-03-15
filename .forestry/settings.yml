@@ -7,10 +7,9 @@ sections:
 - type: document
   path: src/posts
   label: Blogbejegyzéseim
-  match: "**/*"
   read_only: true
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: src/images
+public_path: "/static"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
