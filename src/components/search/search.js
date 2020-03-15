@@ -14,7 +14,6 @@ import "instantsearch.css/themes/reset-min.css"
 import "../../styles/algolia.css"
 
 import PostPreview from "./post-preview"
-import "./search.module.css"
 
 const appId = process.env.GATSBY_ALGOLIA_APP_ID
 const searchKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY
