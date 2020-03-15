@@ -9,7 +9,7 @@ sections:
   label: Blog
   create: documents
   match: "**/*"
-  new_doc_ext: md
+  new_doc_ext: ".md"
 - type: document
   path: src/posts
   label: Blogbejegyzéseim
