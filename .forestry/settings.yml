@@ -10,10 +10,6 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: ".md"
-- type: document
-  path: src/posts
-  label: Blogbejegyzéseim
-  read_only: true
 upload_dir: src/images
 public_path: "/static"
 front_matter_path: ''
