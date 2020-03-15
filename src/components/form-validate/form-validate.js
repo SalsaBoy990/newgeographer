@@ -41,25 +41,21 @@ const FormComponent = () => {
       email: "",
       message: "",
     },
-    validate,
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
-    },
+    validate
   })
   return (
     <form
-      onSubmit={formik.handleSubmit}
       name="contact"
-      className="custom-form ws-validate"
-      method="POST"
-      action="#"
-      netlify-honeypot="bot-field"
-      netlify
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    
     >
+      <input type="hidden" name="form-name" value="contact" />
       <p className="hidden">
         <label>
           Ha ember vagy, ezt ne töltsd ki: <input name="bot-field" />
-        </label>
+        </label> 
       </p>
       <div className="form-group mb2">
         <label
