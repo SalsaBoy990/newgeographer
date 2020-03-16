@@ -1,0 +1,55 @@
+---
+label: Blog
+hide_body: false
+fields:
+  - name: title
+    type: text
+    label: Cím
+    hidden: [false]
+    config:
+      required: true
+  - name: date
+    type: datetime
+    label: Dátum
+    description: ""
+    hidden: [false]
+    config:
+      required: true
+      date_format: YYYY-MM-DD
+      time_format:
+      display_utc: false
+      export_format: YYYY-MM-DD
+    default: now
+  - name: excerpt
+    type: textarea
+    label: Kivonat
+    description: (max. 150-160 karakter lehet)
+    hidden: [false]
+    config:
+      required: true
+      wysiwyg: false
+  - name: tags
+    type: tag_list
+    label: Címkék
+    description: (több címkét is hozzáadhatsz)
+    hidden: [false]
+    config:
+      required: true
+    default:
+        - javascript
+  - name: featuredImage
+    type: text
+    label: Borítókép (.jpg/.png)
+    description: (formátum ->  ../images/<fajlnev>.jpg|png  )
+    hidden: [false]
+    config:
+      required: true
+  - name: attachments
+    type: tag_list
+    label: Mellékletek (opcionális)
+    description: (formátum ->  ../files/<fajlnev>.png|zip )
+    hidden: [false]
+    config:
+      required: false
+
+  
