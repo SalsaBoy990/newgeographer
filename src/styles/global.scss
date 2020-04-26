@@ -6,6 +6,11 @@
 @import "media-queries.scss";
 
 
+/* Some custom global css rules */
+.container-max-width {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .initialClose {
   display: none;
 }
@@ -18,7 +23,6 @@
   display: none !important;
 }
 
-/* Some custom global css rules */
 .mx-responsive {
   margin-right: 45px;
   margin-left: 45px;
@@ -50,7 +54,8 @@ textarea {
   display: inline-block;
   padding-right: 0.5rem;
   color: #6c757d;
-  content: ">";
+  font-family: 'FontAwesome';
+  content: "\f101";
 }
 
 .breadcrumb {

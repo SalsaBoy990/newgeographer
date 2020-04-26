@@ -2,7 +2,7 @@
 import { jsx, css } from "@emotion/core"
 import React from "react"
 import kebabCase from "lodash/kebabCase"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { motion } from "framer-motion"
 
@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
     const nextPage = (currentPage + 1).toString()
 
     return (
-      <Container>
+      <Container className="container-max-width">
         <SEO title={`Főoldal`} website={true} />
         <Header>
           <NavLink to="/">
@@ -65,43 +65,45 @@ class BlogIndex extends React.Component {
                     <Link to={node.fields.slug}>
                       <Img
                         fluid={
-                          node.frontmatter.featuredImage.childImageSharp.fluid
+                          node.frontmatter.cover_image.childImageSharp.fluid
                         }
                         alt={`${node.frontmatter.title} borító`}
                       ></Img>
                     </Link>
                   </motion.div>
-                  <hr></hr>
 
-                  {node.frontmatter.tags.map(tag => (
-                    <Link
-                      key={tag}
-                      to={`/cimke/${kebabCase(tag)}`}
-                      className={`no-underline d-none d-sm-none d-md-inline`}
-                    >
-                      <Tag
-                        css={css`
-                          color: #999;
-                        `}
-                        className={`small-size`}
-                      >{`${tag} `}</Tag>
-                    </Link>
-                  ))}
+                  <div className="mthalf">
+                    {node.frontmatter.tags.map(tag => (
+                      <Link
+                        key={tag}
+                        to={`/cimke/${kebabCase(tag)}`}
+                        className={`no-underline d-none d-sm-none d-md-inline`}
+                      >
+                        <Tag
+                          css={css`
+                            color: #999;
+                          `}
+                          className={`small-size`}
+                        >{`${tag} `}</Tag>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-                <div className="col-12 col-sm-12 col-md-6 p1 m-phalf">
-                  <motion.div
-                    whileHover={{
-                      y: -1,
-                      transition: { type: "spring", duration: 1 },
-                    }}
+                <div
+                  className="col-12 col-sm-12 col-md-6 p1 m-phalf"
+                  css={css`
+                    padding-top: 0;
+                  `}
+                >
+                  <Link
+                    to={node.fields.slug}
+                    className={`no-underline black m-post-title`}
                   >
-                    <Link
-                      to={node.fields.slug}
-                      className={`no-underline black`}
-                    >
-                      <h2 className={`mb0 mt0`}>{node.frontmatter.title}</h2>
-                    </Link>
-                  </motion.div>
+                    <h2 className={`mb0 mt0 postTitleIndex m-post-title`}>
+                      {node.frontmatter.title}
+                    </h2>
+                  </Link>
+
                   <span
                     css={css`
                       color: #aaa;
@@ -110,36 +112,28 @@ class BlogIndex extends React.Component {
                   >
                     {node.frontmatter.date}
                   </span>
-                  <p className={`mt1 mb0`}>{node.frontmatter.excerpt}</p>
-                  <motion.div
-                    whileTap={{
-                      x: 2,
-                      transition: {
-                        type: "tween",
-                        damping: 9,
-                        stiffness: 95,
-                        duration: 1,
-                      },
-                    }}
-                    whileHover={{
-                      x: 2,
-                      transition: {
-                        type: "tween",
-                        damping: 9,
-                        stiffness: 95,
-                        duration: 1,
-                      },
-                    }}
-                    className={`clearfix`}
-                  >
-                    <Link
-                      to={node.fields.slug}
-                      className={`float-right mbhalf`}
-                    >
-                      {node.timeToRead} perc olvasás{" "}
-                      <i className="fas fa-long-arrow-alt-right"></i>
+                  <p className={`mt1 m-mt0 mb0`}>
+                    {node.frontmatter.excerpt}{" "}
+                    <Link to={node.fields.slug} className={`mbhalf mthalf`}>
+                      {node.timeToRead} perc olvasás
                     </Link>
-                  </motion.div>
+                  </p>
+                  <div className="mthalf tagsMobileIndex">
+                    {node.frontmatter.tags.map(tag => (
+                      <Link
+                        key={`${tag}-2`}
+                        to={`/cimke/${kebabCase(tag)}`}
+                        className={`no-underline d-inline d-sm-inline d-md-none d-lg-none`}
+                      >
+                        <Tag
+                          css={css`
+                            color: #999;
+                          `}
+                          className={`min-size`}
+                        >{`${tag} `}</Tag>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -185,7 +179,8 @@ class BlogIndex extends React.Component {
               ))}
               {!isLast && (
                 <Link to={nextPage} rel="next">
-                  Következő oldal →
+                  Következő oldal{" "}
+                  <i className="fas fa-long-arrow-alt-right"></i>
                 </Link>
               )}
             </ul>
@@ -214,7 +209,7 @@ export const query = graphql`
             excerpt
             title
             tags
-            featuredImage {
+            cover_image {
               childImageSharp {
                 fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid

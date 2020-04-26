@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core"
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 import kebabCase from "lodash/kebabCase"
 import { Link, graphql } from "gatsby"
@@ -65,15 +66,15 @@ export default ({ data, pageContext }) => {
         background-color: #fffffe;
       `}
     >
-      <Container>
+      <Container className="container-max-width">
         <Header>
           <NavLink to="/">Főoldal</NavLink>
           <NavLink to="/rolam/">Rólam</NavLink>
           <NavLink to="/kapcsolat/">Kapcsolat</NavLink>
         </Header>
         <Row>
-          <SEO title={post.frontmatter.title} description={post.excerpt} image={post.frontmatter.featuredImage.publicURL} pathname={post.fields.slug} article={true} />
-          <div className={`col-12 m0 p0 mb1 mt2`}>
+          <SEO title={post.frontmatter.title} description={post.excerpt} image={post.frontmatter.cover_image.publicURL} pathname={post.fields.slug} article={true} />
+          <div className={`col-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 p0 mb1 mt2`}>
             <Breadcrumb>{post.frontmatter.title}</Breadcrumb>
             <h1 className={`mbhalf`}>{post.frontmatter.title}</h1>
             <p
@@ -219,7 +220,7 @@ export const query = graphql`
         title
         date(locale: "hu", formatString: "YYYY. MMMM D.")
         tags
-        featuredImage {
+        cover_image {
           publicURL
         }
         attachments {

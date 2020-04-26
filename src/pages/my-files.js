@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core"
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 import { Router } from "@reach/router"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"

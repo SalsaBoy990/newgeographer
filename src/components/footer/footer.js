@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core"
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -33,16 +34,23 @@ export default ({ children }) => {
           }
         }
       }
-      gatsbyImg: file(relativePath: { eq: "images/gatsby-small.png" }) {
+      gatsbyImg: file(relativePath: { eq: "images/gatsby-icon.png" }) {
         childImageSharp {
           fixed(width: 24, height: 24, pngQuality: 85) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      netlifyImg: file(relativePath: { eq: "images/netlify-small.png" }) {
+      netlifyImg: file(relativePath: { eq: "images/netlify.png" }) {
         childImageSharp {
           fixed(width: 24, height: 24, pngQuality: 85) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      forestryImg: file(relativePath: { eq: "images/forestry.jpg" }) {
+        childImageSharp {
+          fixed(width: 24, height: 24) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -53,7 +61,7 @@ export default ({ children }) => {
   // console.log(data)
   return (
     <footer>
-      <div className={`${footerStyles.bgGreen}`}>
+      <div className={`${footerStyles.bgGreen} container-max-width`}>
         <Container>
           <Row>
             <div className="col-12 col-sm-12 col-md-8 col-lg-7 col-xl7 pt2 pb0 pl0 pr0 clearfix">
@@ -66,7 +74,7 @@ export default ({ children }) => {
                 css={css`
                   letter-spacing: 1px;
                 `}
-                className={`h3 mb0 bold-600 ${footerStyles.lightGray}`}
+                className={`h3 mb0 bold-500 ${footerStyles.lightGray}`}
               >
                 {data.site.siteMetadata.author}
               </h1>
@@ -128,15 +136,14 @@ export default ({ children }) => {
           </Row>
         </Container>
       </div>
-      <div className={`${footerStyles.bgBlack}`}>
+      <div className={`${footerStyles.bgBlack} container-max-width`}>
         <Container>
           <Row>
             <div className={`col-12 p0 mthalf mbhalf`}>
               <p
                 className={`inline m0 ${footerStyles.lightGray2} ${footerStyles.minSize}`}
               >
-                &copy; 2019–{new Date().getFullYear()} ÚjGeo – Gulácsi András
-                szakmai honlapja. Minden jog fenntarva. Az oldalt működteti:
+                &copy; 2019–{new Date().getFullYear()} ÚjGeo – Gulácsi András. Minden jog fenntarva. Az oldalt működteti:
               </p>
               <div className={`inline mlquarter`}>
                 <a
@@ -167,6 +174,21 @@ export default ({ children }) => {
                     fixed={data.netlifyImg.childImageSharp.fixed}
                     alt="Netlify ikon"
                     title="Netlify"
+                    className="mrquarter"
+                  />
+                </a>
+                <a
+                  href="https://forestry.io/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Img
+                    css={css`
+                      margin-bottom: -5px !important;
+                    `}
+                    fixed={data.forestryImg.childImageSharp.fixed}
+                    alt="Forestry.io ikon"
+                    title="Forestry"
                   />
                 </a>
               </div>

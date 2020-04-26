@@ -2,3 +2,8 @@
   base    = "/"
   publish = "public"
   command = "npm run build"
+
+[dev]
+  base    = "/"
+  publish = "public"
+  command = "npm run build"

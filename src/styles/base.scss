@@ -33,8 +33,10 @@ $light-gray:    #EAEAEA;
 $light-gray2:   #D9DDE3;
 $light-gray3:   #EFEFEF;
 $white2:        #EEEFF2;
+$white3:        #f3f5fa;
 $dark-coral:    #C88E78;
 $light-coral:   #C89F90;
+$light-coral:   #f1edec;
 $yellow:        #FFF2C9;
 $dark-gray:     #433F3E;
 
@@ -66,7 +68,7 @@ $code-font:    '';
 body,
 html {
     color: $black;
-    background: $white2;
+    background: #fff;
     font-size: $base-size;
     font-family: $body-font;
     line-height: $lheight;
@@ -302,8 +304,9 @@ a {
 }
 
 input {
-  border-radius: 5px;
-  min-width: 100%;
+  border-radius: 2px;
+  padding-left: 5px;
+  // border-color: rgb(169, 169, 169);
   background-color: #fff;
   font-family: $body-font;
   font-size: 1rem;
@@ -317,13 +320,14 @@ input[type=text]:focus, input[type="email"]:focus, textarea:focus {
 textarea {
   font-family: $body-font;
   font-size: 1rem;
-  border-width: 2px;
-  border-style: solid;
-  border-top-color: #999;
-  border-left-color: #999;
-  border-right-color: #ddd;
-  border-bottom-color: #ddd;
-  border-radius: 5px;
+  padding-left: 5px;
+  // border-width: 1px;
+  // border-style: solid;
+  // border-top-color: #999;
+  // border-left-color: #999;
+  // border-right-color: #ddd;
+  // border-bottom-color: #ddd;
+  border-radius: 2px;
   background-color: #fff;
   color: $black;
   min-width: 100%;
@@ -333,7 +337,6 @@ textarea {
 
 .btn {
   display: inline-block;
-  font-weight: 700;
   color: #212529;
   text-align: center;
   vertical-align: middle;
@@ -346,6 +349,7 @@ textarea {
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: $medium-size;
+  font-weight: 500;
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

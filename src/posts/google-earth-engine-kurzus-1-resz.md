@@ -2,13 +2,11 @@
 title: "Google Earth Engine kurzus 1. rész"
 date: "2019-11-03"
 excerpt: >-
-  A Szegedi Tudományegyetemen tartott Google Earth Engine kurzusom írott
-  változata. Csatoltam a szükséges kódrészleteket, fájlokat és a prezentációm
-  diáit is. 1. rész.
+  Az SZTE Természeti Földrajzi és Geoinformatikai Tanszékén  tartott gyakorlatorientált Google Earth Engine kurzusom írott változata.
 tags:
   - "Google Earth Engine"
   - "JavaScript"
-featuredImage: "../images/gee_editor.jpg"
+cover_image: "../images/gee_editor.jpg"
 attachments:
   - "../files/miklapuszta.zip"
   - "../files/google-earth-engine-gulacsi-andras-2019-1ora.pdf"
@@ -32,7 +30,7 @@ A Google Earth Engine (GEE) egy felhő alapú számítási platform, amit műhol
 
 A GEE Code Editor fejlesztői környezet felületét a lenti kép mutatja: fent középen a JavaScript kódszerkesztő, alul a térképnézet, a bal felső ablakban a fülekkel a szkriptkezelő (**Scripts**), az API dokumentáció (**Docs**) és a saját feltöltött adataink (**Assets**) érhetők el. A jobb felső ablakban a felügyelő (**Inspector**) – pl. a térképre kattintva egy pont földrajzi koordinátáit írja ki –, a konzol (**Console**) – a `print()` függvény ide ír –, és a feladatok (**Tasks**) – pl. egy műholdkép GeoTIFF-be exportálása – jeleníthető meg a fülekre kattintva. A kódszerkesztő ablak fejlécében a **Get Link** gombra kattintva megkapjuk a szkriptünkre mutató egyedi html címet. Szintén ide rakták a mentés, a futtatás, a reset, az app kezelő és a beállítások gombokat.
 
-![A Google Earth Engine Kódszerkesztő felülete. Ezen keresztül használhatjuk a JavaScript API-t](../images/featured/gee_editor.jpg)
+![A Google Earth Engine Kódszerkesztő felülete. Ezen keresztül használhatjuk a JavaScript API-t](../images/uploads/gee_editor.jpg)
 
 ### Néhány fontos tudnivaló indulás előtt
 

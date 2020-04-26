@@ -2,13 +2,11 @@
 title: Google Earth Engine kurzus 2. rész
 date: "2019-11-11"
 excerpt: >-
-  A Szegedi Tudományegyetemen tartott Google Earth Engine kurzusom írott
-  változata. Csatoltam a szükséges kódrészleteket, fájlokat és a prezentációm
-  diáit is. 2. rész.
+  Az SZTE Természeti Földrajzi és Geoinformatikai Tanszékén  tartott gyakorlatorientált Google Earth Engine kurzusom írott változata.
 tags:
   - Google Earth Engine
   - JavaScript
-featuredImage: ../images/gee_editor.jpg
+cover_image: ../images/gee_editor.jpg
 attachments:
   - "../files/gee-course-2019.zip"
   - "../files/google-earth-engine-gulacsi-andras-2019-2-3ora.pdf"
@@ -40,9 +38,9 @@ git clone https://earthengine.googlesource.com/users/gulandras90/gee_course_2019
 
 ### Íme, az eredmény: Erdőirtások Apuí közelében, Brazíliában
 
-![Landsat 8 valós színes kompozit](../images/featured/amazonas-landsat8-kompozit.jpg)
+![Landsat 8 valós színes kompozit](../images/uploads/amazonas-landsat8-kompozit.jpg)
 
-![Landsat 8 standardizált NDVI](../images/featured/amazonas-landsat8-standardized-ndvi.jpg)
+![Landsat 8 standardizált NDVI](../images/uploads/amazonas-landsat8-standardized-ndvi.jpg)
 
 
 ## Irodalom

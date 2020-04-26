@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core"
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 import { useFormik } from "formik"
 
@@ -21,6 +22,10 @@ const validate = values => {
     errors.email = "A megadott e-mail érvénytelen"
   }
 
+  if (!values.subjectList) {
+    errors.subjectList = "Kötelező mező"
+  }
+
   if (!values.message) {
     errors.message = "Kötelező szöveg"
   } else if (values.message.length < 80) {
@@ -39,30 +44,62 @@ const FormComponent = () => {
     initialValues: {
       name: "",
       email: "",
+      subjectList: "",
       message: "",
     },
-    validate
+    validate,
   })
+
+  function encode(data) {
+    const formData = new FormData()
+    for (const key of Object.keys(data)) {
+      formData.append(key, data[key])
+    }
+    return formData
+  }
+
+  const [msg, setMsg] = React.useState(null)
+
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+
+    fetch('/', {
+      method: 'POST',
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        name: form.name.value,
+        email: form.email.value,
+        subjectList: form.subjectList.value,
+        message: form.message.value,
+      }),
+    })
+    .then( () => setMsg('Sikeresen elküldted az üzenetet! Kösz az érdeklődést!'))
+    .catch( (err) => console.error(err))
+
+  }
+
   return (
+    <>
     <form
+      onSubmit={handleSubmit}
       name="contact"
-      method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-    
     >
       <input type="hidden" name="form-name" value="contact" />
       <p className="hidden">
         <label>
           Ha ember vagy, ezt ne töltsd ki: <input name="bot-field" />
-        </label> 
+        </label>
       </p>
-      <div className="form-group mb2">
+      <div className="form-group mb1">
         <label
           htmlFor="inputName"
           className="form-label gray-green medium-size bold-700"
         >
-          Add meg a neved{" "}
+          Teljes név{" "}
         </label>
         <br></br>
         <input
@@ -74,17 +111,23 @@ const FormComponent = () => {
           className="border-round input-lg expanded"
           required="required"
           placeholder=""
+          css={css`
+            min-width: 400px;
+            @media (max-width: 500px) {
+              min-width: 100%;
+            }
+          `}
         />
         <p className="small-size">
-          {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+          {formik.errors.name ? <span><i class="fas fa-exclamation-circle"></i>{" "}{formik.errors.name}</span> : null}
         </p>
       </div>
-      <div className="form-group mb2">
+      <div className="form-group mb1">
         <label
           htmlFor="inputEmail"
           className="form-label gray-green medium-size bold-700"
         >
-          Az e-mail címed{" "}
+          E-mail cím{" "}
         </label>
         <br></br>
         <input
@@ -96,9 +139,37 @@ const FormComponent = () => {
           className="border-round input-lg expanded"
           required="required"
           placeholder=""
+          css={css`
+            min-width: 400px;
+            @media (max-width: 500px) {
+              min-width: 100%;
+            }
+          `}
         />
         <p className="small-size">
-          {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+          {formik.errors.email ? <span><i class="fas fa-exclamation-circle"></i>{" "}{formik.errors.email}</span> : null}
+        </p>
+      </div>
+      <div className="form-group mb1">
+        <label
+          htmlFor="inputSubject"
+          className="form-label gray-green medium-size bold-700"
+        >
+          Tárgy{" "}
+        </label>
+        <br></br>
+        <select
+          id="inputSubject"
+          name="subjectList"
+          onChange={formik.handleChange}
+          required>
+          <option value="" disabled="">Válassz a listából</option>
+          <option value="allasajanlat">Állásajánlat</option>
+          <option value="kerdes">Kérdés</option>
+          <option value="egyeb">Egyéb</option>
+        </select>
+        <p className="small-size">
+          {formik.errors.subjectList ? <span><i class="fas fa-exclamation-circle"></i>{" "}{formik.errors.subjectList}</span> : null}
         </p>
       </div>
 
@@ -107,7 +178,7 @@ const FormComponent = () => {
           htmlFor="message"
           className="form-label gray-green medium-size bold-700"
         >
-          Írd meg az üzenetedet{" "}
+          Üzenet{" "}
         </label>
         <br></br>
         <textarea
@@ -120,7 +191,7 @@ const FormComponent = () => {
           placeholder=""
         ></textarea>
         <p className="small-size">
-          {formik.errors.message ? <div>{formik.errors.message}</div> : null}
+          {formik.errors.message ? <span><i class="fas fa-exclamation-circle"></i>{" "}{formik.errors.message}</span> : null}
         </p>
       </div>
 
@@ -143,6 +214,8 @@ const FormComponent = () => {
         </button>
       </div>
     </form>
+    <p css={css`margin-top: 15px; background-color: #77D6A3;`}>{msg ? msg : ""}</p>
+    </>
   )
 }
 

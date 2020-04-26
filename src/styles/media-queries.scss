@@ -20,10 +20,6 @@
     }
 }
 
-@media (min-width: 768px) {
-
-}
-
 @media (max-width: 1024px) {
     .mx-responsive {
         margin-left: margin-size(2) !important;
@@ -35,6 +31,12 @@
   .m-align-center {
     text-align: center;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .tagsMobileIndex {
+    display: none !important;
   }
 }
 
@@ -52,6 +54,19 @@
     .m-mrhalf {
       margin-right: margin-size(0.5)
     }
+    .tagsMobileIndex {
+      display: inline;
+    }
+}
+
+@media (max-width: 767px) {
+  .postTitleIndex {
+    background-color: #fff !important;
+    width: 100%;
+    font-size: 26px !important;
+    padding-top: margin-size(0.5);
+    margin-top: margin-size(-2);
+  }
 }
 
 @media (max-width: 576px) {
@@ -59,11 +74,28 @@
         margin-left: 16px !important;
         margin-right: 16px !important;
     }
+    .m-site-title {
+      font-size: 34px !important;
+    }
+    .m-post-title {
+      font-size: 26px !important;
+    }
+
     .m-phalf {
-      padding: margin-size(0.5);
+      padding-top: margin-size(0.5);
+      padding-bottom: margin-size(0.5);
+      padding-left: margin-size(0);
+      padding-right: margin-size(0);
     }
     .m-mr0 {
       margin-right: 0;
+    }
+    .m-mt0 {
+      margin-top: 0;
+    }
+
+    .m-mt1 {
+      margin-top: margin-size(1);
     }
 
     .m-border-top {

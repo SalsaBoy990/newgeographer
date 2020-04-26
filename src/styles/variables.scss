@@ -1,0 +1,60 @@
+// Size Variables
+$baseline:    1.5rem /* 27px */;
+$base-size:   18px;
+$lheight:     1.6;
+$h1-size:     2.222222rem;
+$h2-size:     1.666667rem;
+$h3-size:     1.333333rem;
+$h4-size:     1rem;
+$medium-size: 0.888888rem;
+$small-size:  0.777777rem;
+$min-size:    0.666666rem;
+
+// Base color Variables
+// $black:        #222;
+$white:        #FFF;
+$gray:         #CCC;
+$gray2:        #AAA;
+$gray3:        #888;
+$gray4:        #555;
+// $blue:         #2A3E94;
+
+// Theme color Variables
+$orange:        #C83904;
+$dark-green:    #0B6052;
+$gray-green:    #515958;
+$light-green:   #77D6A3;
+$light-green2:  #98b9a7;
+$black:         #323a38;
+$black2:        #343434;
+$black3:        #151817;
+$medium-gray:   #687270;
+$light-gray:    #EAEAEA;
+$light-gray2:   #D9DDE3;
+$light-gray3:   #EFEFEF;
+$white2:        #EEEFF2;
+$white3:        #f3f5fa;
+$dark-coral:    #C88E78;
+$light-coral:   #C89F90;
+$light-coral:   #f1edec;
+$yellow:        #FFF2C9;
+$dark-gray:     #433F3E;
+
+// $error:         #E7785F;
+$error:         #bd4429;
+$success:       #77D6A3;
+$info:          #F0DD9C;
+
+$blue:         #117bb8;
+$medium-blue:  #117bb8;
+$light-blue:   #9bd9fd;
+
+// Function to calculate margin sizes (n times the baseline grid size)
+@function margin-size($n) {
+  @return $n * $baseline;
+}
+
+// Function to calculate border-radius (in pixels)
+@function border-radius($num) {
+  @return $num + 'px';
+}

@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core"
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 
 import SEO from "../components/seo"
@@ -10,8 +11,6 @@ import Footer from "../components/footer/footer.js"
 import Breadcrumb from "../components/breadcrumb/breadcrumb.js"
 import NavLink from "../components/nav-link/nav-link.js"
 import FormValidated from "../components/form-validate/form-validate.js"
-
-import contactGIF from '../gifs/contact-me.gif'
 
 export default () => (
   <Container>
@@ -24,21 +23,21 @@ export default () => (
       </NavLink>
     </Header>
     <Row>
-      <div className="col-12 p0 mt2">
+      <div className="col-12 col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3 p0 mt2">
         <Breadcrumb>Kapcsolat</Breadcrumb>
         <h1>Kapcsolat</h1>
-        <hr></hr>
+
         <div className="row m0 p0">
           <div
-            className="col-12 col-sm-12 col-md-9 col-lg-7 col-xl-6 p0 p1 m-phalf mt0 mb2"
+            className="col-12 p0 mt0 mb2"
             css={css`
-              background-color: #fffffe;
-              border: 1px solid #ededed;
+              background-color: #fff;
               border-radius: 5px;
               box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+              padding: 15px;
+              margin-left: -15px;
             `}
           >
-            <img className="mb1" src={contactGIF} alt="Üzenj nekem"></img>
             <FormValidated></FormValidated>
           </div>
         </div>

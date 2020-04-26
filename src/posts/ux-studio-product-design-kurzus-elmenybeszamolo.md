@@ -2,12 +2,12 @@
 title: UXstudio Product Design kurzus 2018. ősz
 date: '2019-08-31'
 excerpt: >-
-  Szeptembertől kezdődően részt vettem egy UX designer képzésen az UX Studio cég
-  jóvoltából Budapesten, amit a cég dolgozói, a mentoraink tartottak nekünk.
+  Ősszel részt vettem egy UX designer képzésen az UX Studio 
+  jóvoltából Budapesten, amit a cég dolgozói tartottak nekünk.
 tags:
  - UX design
  - élménybeszámoló
-featuredImage: ../images/uxstudio_kurzus_a_csapatunk.jpg
+cover_image: ../images/uxstudio_kurzus_a_csapatunk.jpg
 attachments:
 ---
 
@@ -23,7 +23,7 @@ Miután megvoltak a tesztek eredményei, a csapatunk kijavította a prototípust
 
 Egyetlen szegediként a kurzuson heti kétszer voltam fenn vonattal, illetve oszkárral. Az alkalmak 17 órától kezdődtek, tehát a mentorok/előadók/workshop vezetők a munkaidejük után tartották az előadásokat és a workshop-okat. A mi csapatunk egy sportközösségi alkalmazást fejlesztett egyetemisták számára, amit az utolsó alkalommal prezentálnunk is kellett a többi csapat előtt. Nem tudom, hogy viszont látom-e még a mentorokat és a csapattagjaimat, mindenesetre megőrzöm őket az emlékeimben.
 
-![A csapatunk tagjai, balról jobbra: László, Balázs, Katica, a mentorunk, Tündi, Én, Péter](../images/featured/uxstudio_kurzus_a_csapatunk.jpg)
+![A csapatunk tagjai, balról jobbra: László, Balázs, Katica, a mentorunk, Tündi, Én, Péter](../images/uploads/uxstudio_kurzus_a_csapatunk.jpg)
 
 Az UXstudio tagjai elültették bennünk az UX magvait. Most eljött az idő, hogy a magok kicsírázzanak és növények fejlődjenek belőlük, a gyökereiken át felszívva az UX-tápot.
 

@@ -3,13 +3,12 @@ title: static-site-express, a Node.js-based static site generator
 date: '2019-09-11'
 excerpt: >-
   static-site-express is a simple Node.js based static-site generator that uses
-  EJS and Markdown. You can deploy your static site to the Netlify or to the
-  Heroku cloud platform.
+  EJS and Markdown. Deploy to Netlify.
 tags:
  - statikus oldalgenerátor
  - in English
  - JavaScript
-featuredImage: ../images/lightning-strike.jpg
+cover_image: ../images/lightning-strike.jpg
 attachments:
 ---
 

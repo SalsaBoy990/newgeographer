@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core"
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
@@ -83,7 +84,7 @@ const ResponsiveHeader = ({ children }) => {
 
   return (
     <header>
-      <GreenBox>
+      <GreenBox className="container-max-width">
         <Container>
           <Row>
             <div className="col-12 p0">

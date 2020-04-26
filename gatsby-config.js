@@ -17,7 +17,6 @@ module.exports = {
     lastName: "Gulácsi",
     url: "https://www.newgeographer.com",
     siteUrl: "https://www.newgeographer.com",
-    image: "/meandering-river.jpg",
     email: "guland@protonmail.com",
     socialMedia: {
       github: "https://github.com/SalsaBoy990",
@@ -35,7 +34,7 @@ module.exports = {
         fonts: [
           {
             family: `Prompt`,
-            variants: [`600`, `700`, `700i`],
+            variants: [`500`, `700`, `700i`],
             subsets: [`latin-ext`],
           },
           {
@@ -44,6 +43,13 @@ module.exports = {
             subsets: [`latin-ext`],
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images/uploads/`,
+        name: `media`,
       },
     },
     {
@@ -66,15 +72,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images/featured/`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          // gatsby-remark-relative-images must
+          // go before gatsby-remark-images
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -84,7 +87,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-normalize-paths",
             options: {
-              pathFields: ["featuredImage"],
+              pathFields: ["cover_image"],
             },
           },
           {
@@ -128,6 +131,17 @@ module.exports = {
         trackingId: "UA-106020833-1",
         anonymize: false,
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+        develop: true, // Enable while using `gatsby develop`
+        // tailwind: true, // Enable tailwindcss support
+        // whitelist: ['whitelist'], // Don't remove this selector
+        // ignore: [""], // Ignore files/folders
+        // purgeOnly: ["/src/styles/global.css"], // Purge only these files/folders
+      },
+    },
   ],
 }
