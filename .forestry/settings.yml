@@ -3,7 +3,14 @@ new_page_extension: md
 auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
-sections: 
+sections:
+- type: directory
+  path: src/posts
+  label: A bejegyzéseim
+  create: documents
+  match: "**/*"
+  templates:
+  - blog
 upload_dir: src/images
 public_path: ''
 front_matter_path: ''
@@ -16,12 +23,3 @@ build:
   mount_path: "/srv"
   working_dir: "/srv"
   instant_preview_command: npm run forestry:preview
-sections:
-- type: directory
-  path: src/posts
-  label: A bejegyzéseim
-  create: documents
-  match: "**/*"
-  templates:
-    - blog
-
