@@ -114,7 +114,7 @@ export default ({ children }) => {
                 `}
                 className={`pt1 pb1 ${footerStyles.mediumSize}`}
               >
-                Frontend, UI/UX design, Node, Gatsby, Angular 2+
+                Frontend, UI/UX design, Gatsby.js, Node, Wordpress
               </p>
             </div>
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-lg-1 offset-xl-1 p0 m-pl0 pl1 pt2 pb1 m-pt0">

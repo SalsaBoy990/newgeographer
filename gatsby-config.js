@@ -33,12 +33,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Prompt`,
-            variants: [`500`, `700`, `700i`],
+            family: `Yantramanav`,
+            variants: [`700`, `700i`],
             subsets: [`latin-ext`],
           },
           {
-            family: `Poppins`,
+            family: `Noto Serif`,
             variants: [`400`, `400i`, `700`],
             subsets: [`latin-ext`],
           },
@@ -132,16 +132,16 @@ module.exports = {
         anonymize: false,
       }
     },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: true, // Print removed selectors and processed file names
-        develop: true, // Enable while using `gatsby develop`
-        // tailwind: true, // Enable tailwindcss support
-        // whitelist: ['whitelist'], // Don't remove this selector
-        // ignore: [""], // Ignore files/folders
-        // purgeOnly: ["/src/styles/global.css"], // Purge only these files/folders
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: {
+    //     printRejected: true, // Print removed selectors and processed file names
+    //     develop: true, // Enable while using `gatsby develop`
+    //     // tailwind: true, // Enable tailwindcss support
+    //     // whitelist: ['whitelist'], // Don't remove this selector
+    //     ignore: [""], // Ignore files/folders
+    //     // purgeOnly: ["/src/styles/global.css"], // Purge only these files/folders
+    //   },
+    // },
   ],
 }

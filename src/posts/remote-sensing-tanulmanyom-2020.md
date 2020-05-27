@@ -9,7 +9,7 @@ tags:
   - "folyóiratcikk"
   - "Sentinel-1 C-SAR"
   - "vizes élőhelyek"
-  - szintetikus apertúrájú radar"
+  - "szintetikus apertúrájú radar"
 
 cover_image: "../images/remote-sensing-certificate-2020.jpg"
 attachments:
@@ -20,7 +20,8 @@ attachments:
 
 ![Remote Sensing tanúsítvány az elfogadásról](../images/uploads/remote-sensing-certificate-2020.jpg)
 
-Amennyiben reprodukálni szeretnéd az eredményeimet vagy felhasználni a Sentinel-1 C-SAR adatokat feldolgozó szkriptjeimet (MIT liszensz), tekintsd meg a Github repo-mat: [gee_s1_sar_wetlands](https://github.com/SalsaBoy990/gee_s1_sar_wetlands).
+Amennyiben reprodukálni szeretnéd az eredményeimet vagy felhasználni a Sentinel-1 C-SAR adatokat feldolgozó szkriptjeimet (MIT liszensz), tekintsd meg a Github repo-mat:
+[gee-s1-sar-wetlands](https://github.com/SalsaBoy990/gee_s1_sar_wetlands).
 
 Ha kérdésed van, tedd fel az elérhetőségeimen.
 
