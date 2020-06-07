@@ -118,7 +118,7 @@ export default ({ children }) => {
               </p>
             </div>
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-lg-1 offset-xl-1 p0 m-pl0 pl1 pt2 pb1 m-pt0">
-              <a href="#">
+              <a href="https://uifactory.design/static/f4d161adaf4e593ca5aef37a4e90800a/Andras-Gulacsi-CV-2020.pdf">
                 <span
                   css={css`
                     color: #ccc;
@@ -126,7 +126,6 @@ export default ({ children }) => {
                   className={`${footerStyles.mediumSize}`}
                 >
                   <i className="fas fa-file-download"></i> Önéletrajz letöltése
-                  (feltöltés alatt)
                 </span>
               </a>
             </div>
